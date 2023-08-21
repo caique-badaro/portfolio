@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caique Badaró, UX/UI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Animações -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar desktop -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <a href="index.html"><img src="imgs\logo-horizontal_gray-n2.svg" alt="Caique Badaró"></a>
+    </div>
+    <div class="navbar-right">
+      <h6 class="heading-6-n1"><a id="btn--navbar--projetos">Projetos</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--experiencias">Experiências</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--academico">Acadêmico</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--post">Publicações</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--contato">Contato</a></h6>
+    </div>
+  </div>
+  <!-- End Navbar desktop -->
+  <!-- Bottom bar mobile/tablet -->
+  <div class="bottom-bar">
+    <div class="bottom-bar--container">
+      <!-- Navegação botões-->
+      <div class="bottom-bar--col">
+        <a href="index.html">
+          <button class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\home.svg" alt="Página inicial">
+            <p class="label-n1">Home</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col">
+        <a>
+          <button id="btn--botton-bar--post" class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\menu-book.svg" alt="Publicações">
+            <p class="label-n1">Posts</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col">
+        <a>
+          <button id="btn--botton-bar--projetos" class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\business_center.svg" alt="Projetos">
+            <p class="label-n1">Projetos</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col" id="contatoCol">
+        <a>
+          <button class="bottom-bar--btn" id="contatoButton">
+            <img class="bottom-bar--icon" src="icons\talk.svg" alt="Contato">
+            <p class="label-n1">Contato</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col" id="menuCol">
+        <a>
+          <button class="bottom-bar--btn" id="menuButton">
+            <img class="bottom-bar--icon" src="icons\badge.svg" alt="Perfil">
+            <p class="label-n1">Perfil</p>
+          </button>
+        </a>
+      </div>
+      <!-- Menu pop-up mobile e tablet -->
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <div class="popup--container-mobile">
+            <div class="popup--row-mobile-close"><button id="closeButton" class="popup--close-btn"><img src="icons\close.svg"></button></div>
+            <img class="popup--logo--mobile" src="imgs\logo-block_black.svg" alt="Caique Badaró, UX/UI Designer">
+            <div class="popup--row-mobile">
+              <!-- <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">01. </span>Projetos</h2></a> -->
+              <a id="btn-popup--curriculo"><h2 class="heading-2-n1"><span class="caption-n1">01. </span>Currículo</h2></a>
+              <a id="btn-popup--academico"><h2 class="heading-2-n1"><span class="caption-n1">02. </span>Acadêmico</h2></a>
+              <!-- <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">04. </span>Publicações</h2></a>
+              <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">05. </span>Contato</h2></a> -->
+            </div>
+            <div class="popup--row-mobile">
+              <p class="caption-n1"><b>&copy; <span id="current-year"></span>Caique Badaró.</b><br>Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Popup Contato -->
+      <div class="popup" id="popup--contato--bottom-bar">
+        <div class="popup-content--contato">
+          <div class="popup--container-mobile">
+            <div class="popup--row-mobile-close"><button id="closeButtonContato" class="popup--close-btn"><img src="icons\close.svg"></button></div>
+            <img class="popup--logo--mobile" src="imgs\logo-block_black.svg" alt="Caique Badaró, UX/UI Designer">
+            <div class="popup--row-mobile--contato">
+              <a href="https://www.linkedin.com/in/caique-badaro/" target="_new"><img class="contato-popup--icon" src="icons\linkedin-2.svg" alt="LinkedIn"></a>
+              <a href="https://api.whatsapp.com/send?phone=5531973004150" target="_new"><img class="contato-popup--icon" src="icons\whatsapp.svg" alt="WhatsApp"></a>
+              <a href="mailto:caique.badaro@gmail.com" target="_new"><img class="contato-popup--icon" src="icons\mail.svg" alt="E-mail"></a>
+            </div>
+            <div class="popup--row-mobile">
+              <p class="caption-n1"><b>&copy; <span id="current-year"></span>Caique Badaró.</b><br>Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End navegação botões -->
+    </div>
+  </div>
+<!-- End bottom bar -->
+<div id="secao--super-banner-home"></div>
+<!-- Super banner -->
+  <div class="super-banner gradient-background">
+    <div class="super-banner-columns">
+      <div class="super-banner-column">
+        <img src="imgs\logo-block_white.svg" alt="Caique Badaró, UX/UI">
+      </div>
+      <div class="super-banner-column">
+        <img src="imgs\bg-circle-banner.svg" alt="Background Circle">
+      </div>
+    </div>
+    <div class="super-banner-row">
+      <div class="super-banner-text heading-5-n1"><p>Designer</p></div>
+      <div class="super-banner-text heading-5-n1"><p>User Interface</p></div>
+      <div class="super-banner-text heading-5-n1"><p>User Experience</p></div>
+      <div class="super-banner-text heading-5-n1"><p>UX Research</p></div>
+    </div>
+  </div>
+  <!-- End Super banner -->
+  <div id="secao--projetos-home"></div>
+  <!-- Título seção -->
+  <div class="secao">
+    <h2 class="titulo-secao heading-2-n1 projetos-header">Projetos</h2>
+  </div>
+  <!-- Slider projetos início -->
+  <section class="game-section">
+  <!-- <h2 class="line-title">trending games</h2> -->
+    <div class="owl-carousel custom-carousel owl-theme">
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/default_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Em breve</h3>
+          <p>Página em construção.<br>Aguarde as atualizações nos próximos dias.<br><button class="btn-primary-disabled">Continue lendo</button></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Slider projetos -->
+  <div id="secao--experiencias-home"></div>
+  <!-- Título seção -->
+  <div class="secao"><h2 class="titulo-secao heading-2-n1">Experiências</h2></div>
+  <!-- Experiências profissionais -->
+  <div class="experiencias">
+    <button id="botao1" class="botao botao-ativo" onclick="exibirConteudo(this)" data-target="conteudo1">Atual</button>
+    <button id="botao2" class="botao" onclick="exibirConteudo(this)" data-target="conteudo2">2020</button>
+    <button id="botao3" class="botao" onclick="exibirConteudo(this)" data-target="conteudo3">2019</button>
+    <button id="botao4" class="botao" onclick="exibirConteudo(this)" data-target="conteudo4">2017</button>
+    <button id="botao5" class="botao" onclick="exibirConteudo(this)" data-target="conteudo5">2015</button>
+    <button id="botao6" class="botao" onclick="exibirConteudo(this)" data-target="conteudo6">2015</button>
+    <button id="botao7" class="botao" onclick="exibirConteudo(this)" data-target="conteudo7">2014</button>
+    <button id="botao8" class="botao" onclick="exibirConteudo(this)" data-target="conteudo8">2011</button>
+    <!-- Experiência 1 -->
+    <div id="conteudo1" class="conteudo visivel">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Designer User Experience & User Interface | UX/UI</h3>
+          <h5 class="heading-5-n1">Grupo Supernosso</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Contribuo com a estruturação de fluxos de navegação do site e aplicativo, revisitando-o constantemente em busca de melhorias.<br><br>Análise de dados e ferramentas de mapeamento do comportamento dos usuários para identificar pontos de ajuste nas jornadas do produto. Aplicação de pesquisas para mapear tendências de mercado e comportamentos durante a navegação no site e aplicativo.<br><br>Desenvolvimento de testes para análise e validação da usabilidade, coletando feedbacks internos e externos sobre funcionalidades lançadas, identificando oportunidades de otimização das interfaces. Construção de wireframes de alta fidelidade e documentação dos componentes e processos de forma que facilite a implementação pelo time de front-end e back-end.</p>
+          <img src="imgs\post-xp\logo-supernosso_caique-badaro-ux-ui.svg" alt="Grupo Supernosso" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <!-- <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>Tag texto</span>
+          </button> -->
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Mar/2022 - Atual</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 2 -->
+    <div id="conteudo2" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Designer</h3>
+          <h5 class="heading-5-n1">Oficina dos Bits</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Atuei na direção de arte e gestão da identidade visual do site, especificamente banners na tela inicial e sub-páginas. Além de estar constantemente envolvido em projetos de otimização.<br><br>Desenvolvo os templates de newsletter e e-mail marketing com campanhas sazonais, novidades e lançamentos. Além de produzir conteúdos para redes sociais e monitorar o desempenho orgânico das publicações.<br><br>Quanto à comunicação interna, sou responsável pela produção de impressos para brindes sazonais, cartazes informativos, panfletos com instruções de troca e acionamento da garantia.</p>
+          <img src="imgs\post-xp\logo-oficina-dos-bits_caique-badaro-ux-ui.svg" alt="Oficina dos Bits" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>1 ano e 8 meses</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Jul/2020 a Fev/2022</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 3 -->
+    <div id="conteudo3" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Coordenador de marketing</h3>
+          <h5 class="heading-5-n1">CDR Log</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Ao ser contemplado com a promoção para Coordenador, permaneceu sob minhas atribuições as atividades desenvolvidas anteriormente na função de Designer, além de receber maior autonomia para gerir e planejar as atividades no setor de marketing e unidades parceiras (franquias).</p>
+          <img src="imgs\post-xp\logo-CDR-logistica_caique-badaro-ux-ui.svg" alt="CDR Log" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>1 ano</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Mai/2019 a Abr/2020</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 4 -->
+    <div id="conteudo4" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Designer</h3>
+          <h5 class="heading-5-n1">CDR Log</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Após ser efetivado na CDR, permaneceu sob a minha responsabilidade a produção de conteúdo para o site, gestão da comunicação interna e externa, elaboração de peças gráficas, planejamento e produção das campanhas para prospecção de clientes, projetos de sinalização, desenvolvimento de etiquetas e uniformes.<br><br>Além de auxiliar as unidades parceiras (franquias) nas ações de comunicação. Acompanhar o uso e aplicação da marca dentro dos padrões estabelecidos.</p>
+          <img src="imgs\post-xp\logo-CDR-logistica_caique-badaro-ux-ui.svg" alt="CDR Log" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>2 anos</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Jun/2017 a Mai/2019</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 5 -->
+    <div id="conteudo5" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Estagiário de marketing</h3>
+          <h5 class="heading-5-n1">CDR Log</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Durante o estágio, atuei no desenvolvimento de conteúdos para o site, redesign dos materiais utilizados na empresa, elaboração de peças gráficas para divulgação interna e externa. Além disso, participava do planejamento e produção das campanhas para prospecção de clientes.</p>
+          <img src="imgs\post-xp\logo-CDR-logistica_caique-badaro-ux-ui.svg" alt="CDR Log" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>1 ano e 9 meses</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Out/2015 a Jun/2017</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 6 -->
+    <div id="conteudo6" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Estagiário de marketing</h3>
+          <h5 class="heading-5-n1">Naturivida</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Durante o estágio, fiquei responsável por atuar na elaboração de peças gráficas, gestão das redes sociais e site. Especificamente no último, realizava o acompanhamento dos pedidos no E-commerce, atualizava o cadastro dos produtos, gerenciava as promoções e veiculação nos canais de comunicação da empresa.</p>
+          <img src="imgs\post-xp\logo-naturivida_caique-badaro-ux-ui.svg" alt="Naturivida" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>9 meses</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Fev/2015 a Out/2015</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 7 -->
+    <div id="conteudo7" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Soldado</h3>
+          <h5 class="heading-5-n1">Exército Brasileiro, CPOR/CM-BH</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">Guardo na memória os momentos inesquecíveis que vivi durante esse período. Aprendi lições que vou levar para o resto da vida, assim como, o primeiro contato com a área de comunicação.<br><br>Atuei na Seção de Comunicação Social/Relações Públicas no Centro de Preparação de Oficiais da Reserva (CPOR), participei da criação de matérias para o site, peças gráficas para divulgação interna e externa, cobertura fotográfica dos eventos dentro e fora do Colégio Militar de Belo Horizonte (CM-BH).<br><br>Participei da equipe responsável pela diagramação da revista anual do colégio.</p>
+          <img src="imgs\post-xp\logo-CPOR-CMBH_caique-badaro-ux-ui.svg" alt="CPOR/CM-BH" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>1 ano</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Fev/2014 a Jan/2015</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+    <!-- Experiência 8 -->
+    <div id="conteudo8" class="conteudo">
+      <div class="experiencias--info-bg">
+        <div class="cabecalho--experiencias">
+          <h3 class="heading-3-n1">Jovem Aprendiz</h3>
+          <h5 class="heading-5-n1">Suggar Eletrodomésticos</h5>
+          <p class="caption-n2">Belo Horizonte / MG</p>
+        </div>
+        <div class="descricao--experiencia-texto-logo">
+          <p class="body-n1">A primeira experiência profissional merece um destaque especial. Confesso que fiquei muito apreensivo em um primeiro momento, mas, com a ajuda dos colegas de trabalho, o ambiente tornou-se familiar.<br><br>Na Suggar, atuei como Jovem Aprendiz, especificamente na biblioteca disponível dentro da empresa para os colaboradores. Durante esse período, aprendi e fiquei responsável por realizar o cadastro de livros, registros de empréstimo e devolução, manutenção e organização das obras de acordo com o ISBN - International Standard Book Number.</p>
+          <img src="imgs\post-xp\logo-suggar_caique-badaro-ux-ui.svg" alt="Suggar Eletrodomésticos" class="logo--experiencias">
+        </div>
+        <div class="tag--info-data">
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\hourglass-empty.svg" alt="Ícone"><span>2 anos e 1 mes</span>
+          </button>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today.svg" alt="Ícone"><span>Abr/2011 a Abr/2013</span>
+          </button>            
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Título seção -->
+  <div id="secao--academico-home"></div>
+  <div class="acad">
+    <div class="secao">
+      <h2 class="titulo-secao heading-2-n1">Acadêmico</h2>
+    </div>
+    <div class="acad--container">
+      <!-- Primeira coluna -->
+      <div class="acad--col">
+        <!-- Card curso -->
+        <div class="acad--card">
+          <div class="acad--icon-card"><img src="icons\school.svg" alt="Chapéu de formatura acadêmico" class="acad--icon-school"></div>
+          <div class="acad--desc">
+            <p class="label-n1">Pós-graduação</p>
+            <p class="heading-6-n1">User Experience</p>
+            <p class="caption-n1">Ago/2022 - Ago/2023</p>
+          </div>
+          <div class="acad--logo-ref"><img src="imgs\logo-unibh.svg" alt="Logo UniBH" class="acad--logo-instituicao"></div>
+        </div><!-- End -->
+        <!-- Card curso -->
+        <div class="acad--card">
+          <div class="acad--icon-card"><img src="icons\school.svg" alt="Chapéu de formatura acadêmico" class="acad--icon-school"></div>
+          <div class="acad--desc">
+            <p class="label-n1">Graduação</p>
+            <p class="heading-6-n1">Publicidade e Propaganda</p>
+            <p class="caption-n1">Ago/2013 - Ago/2017</p>
+          </div>
+          <div class="acad--logo-ref"><img src="imgs\logo-unibh.svg" alt="Logo UniBH" class="acad--logo-instituicao"></div>
+        </div><!-- End -->
+      </div><!-- End coluna -->
+      <!-- Segunda coluna -->
+      <div class="acad--col">
+        <!-- Card curso -->
+        <div class="acad--card">
+          <div class="acad--icon-card"><img src="icons\school.svg" alt="Chapéu de formatura acadêmico" class="acad--icon-school"></div>
+          <div class="acad--desc">
+            <p class="label-n1">Pós-graduação</p>
+            <p class="heading-6-n1">Design Exponencial</p>
+            <p class="caption-n1">Ago/2019 - Ago/2021</p>
+          </div>
+          <div class="acad--logo-ref"><img src="imgs\logo-unibh.svg" alt="Logo UniBH" class="acad--logo-instituicao"></div>
+        </div><!-- End -->
+        <!-- Card curso -->
+        <div class="acad--card">
+          <div class="acad--icon-card"><img src="icons\school.svg" alt="Chapéu de formatura acadêmico" class="acad--icon-school"></div>
+          <div class="acad--desc">
+            <p class="label-n1">Curso técnico</p>
+            <p class="heading-6-n1">Administração</p>
+            <p class="caption-n1">Jan/2011 - Dez/2013</p>
+          </div>
+          <div class="acad--logo-ref"><img src="imgs\logo-newton.svg" alt="Logo UniBH" class="acad--logo-instituicao"></div>
+        </div><!-- End -->
+      </div><!-- End coluna -->
+      <!-- Terceira coluna -->
+      <div class="acad--col">
+        <!-- Card curso -->
+        <div class="acad--card">
+          <div class="acad--icon-card"><img src="icons\school.svg" alt="Chapéu de formatura acadêmico" class="acad--icon-school"></div>
+          <div class="acad--desc">
+            <p class="label-n1">Escola Britânica de Artes Criativas</p>
+            <p class="heading-6-n1">UI Design</p>
+            <p class="caption-n1">Jan/2021 - Dez/2021</p>
+          </div>
+          <div class="acad--logo-ref"><img src="imgs\logo-ebac.svg" alt="Logo EBAC" class="acad--logo-instituicao"></div>
+        </div><!-- End -->
+      </div><!-- End coluna -->
+    </div>
+  </div><!-- End Acadêmico -->
+  <!-- Título seção -->
+  <div id="secao--publicacoes-home"></div>
+  <div class="secao">
+    <h2 class="titulo-secao heading-2-n1 publicacoes-header">Publicações</h2>
+  </div>
+  <!-- Slider publicações -->
+  <section class="game-section">
+  <!-- <h2 class="line-title">trending games</h2> -->
+    <div class="owl-carousel custom-carousel owl-theme">
+      <div class="item" style="background-image: url(imgs/post-image/reconhecimento-em-vez-de-memorizacao_caique-badaro-ux-ui.gif);">
+        <div class="item-desc">
+          <h3>Reconhecimento em vez de memorização</h3>
+          <p>Imagine que você esteja passeando tranquilamente em seu bairro e de repente encontra com um colega de classe da segunda série, provavelmente <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/reconhecimento-em-vez-de-memoriza%C3%A7%C3%A3o-caique-badar%C3%B3/" target="_new">
+              <button class="btn-primary">Continue lendo</button></a></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/estetica-design-minimalista_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Estética e design minimalista</h3>
+          <p>Menos é mais. Provavelmente não é a primeira vez na vida que você escuta essa célebre frase, caso seja, bom, é melhor se acostumar, ela aparece <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/est%C3%A9tica-e-design-minimalista-caique-badar%C3%B3/" target="_new">
+              <button class="btn-primary">Continue lendo</button></a></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/visibilidade-do-status-do-sistema_caique-badaro-ux-ui.gif);">
+        <div class="item-desc">
+          <h3>Visibilidade do status do sistema</h3>
+          <p>No filme Bird Box (2018), as personagens vivem um drama onde a falta de informação, neste caso visual, proporciona uma situação onde não há <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/visibilidade-do-status-sistema-caique-badar%C3%B3/" target="_new">
+            <button class="btn-primary">Continue lendo</button></a></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/consistencia-e-padronizacao_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Consistência e padronização</h3>
+          <p>Vamos começar com uma breve reflexão sobre o atual panorama macroeconômico que se encontra os países de primeiro mundo e a relação com a queda na bolsa. Calma, é brincadeira, pense apenas <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/consist%C3%AAncia-e-padroniza%C3%A7%C3%A3o-caique-badar%C3%B3/" target="_new"></a>
+            <button class="btn-primary">Continue lendo</button></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/eficiencia-e-flexibilidade_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Eficiência e flexibilidade</h3>
+          <p>Um dos meus hobbys favoritos é cozinhar, lembro muito bem da primeira vez que me aventurei em uma receita de pizza, preparando desde a massa até <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/efici%C3%AAncia-e-flexibilidade-caique-badar%C3%B3/" target="_new">
+            <button class="btn-primary">Continue lendo</button></a></p>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(imgs/post-image/controle-e-liberdade-do-usuario_caique-badaro-ux-ui.svg);">
+        <div class="item-desc">
+          <h3>Controle e liberdade para o usuário</h3>
+          <p>No Castelo do Terror, uma atração bem famosa dos parques de diversão, o desafio é encontrar a saída o mais rápido possível, evitando os encontros assustadores <small>[...]</small>
+            <br><a href="https://www.linkedin.com/pulse/controle-e-liberdade-para-o-usu%C3%A1rio-caique-badar%C3%B3/" target="_new"></a>
+            <button class="btn-primary">Continue lendo</button></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Slider publicações -->
+  <!-- Contato -->
+  <div id="secao--contato-home"></div>
+  <div class="contato--options">
+    <!-- Título seção -->
+    <div class="secao">
+      <h2 class="titulo-secao heading-2-n1">Contato</h2>
+    </div>
+    <div class="container--contato">
+      <div class="col-form-divisao">
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="https://www.linkedin.com/in/caique-badaro/" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\linkedin-2.svg" alt="LinkedIn">
+            <p class="body-n1 contato--type">LinkedIn</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Caique Badaró, UX/UI Designer, LinkedIn">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="https://api.whatsapp.com/send?phone=5531973004150" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\whatsapp.svg" alt="WhatsApp">
+            <p class="body-n1 contato--type">WhatsApp</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Ir para">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="mailto:caique.badaro@gmail.com" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\mail.svg" alt="E-mail">
+            <p class="body-n1 contato--type">Email</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Ir para">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <div class="contato--col--form">
+          <form class="form--contato">
+            <p class="body-n1 contato--type-form">Ou se preferir, deixe seu contato</p>
+            <p class="body-n1"><input class="input--contato" type="text" id="input-name" placeholder="Qual o seu nome?"></p>
+            <p class="body-n1"><input class="input--contato" type="email" id="input-email" placeholder="Informe o seu e-mail"></p>
+            <button class="btn-primary btn-contato-form">Enviar</button>
+          </form>
+        </div>
+        <!-- End Coluna -->
+      </div>
+      <div class="col-form-divisao">
+        <!-- Coluna -->
+        <div class="contato--col--image">
+          <lottie-player src="https://lottie.host/e9d4b4ff-a750-482f-81ab-52083f4eda68/PQShqsoDV4.json" background="transparent"  speed="0.7" loop autoplay></lottie-player>
+        </div>
+        <!-- End Coluna -->
+      </div>
+    </div>
+  </div>
+  <!-- End Contato -->
+<!-- Rodapé -->
+<footer>
+  <div class="footer--container">
+    <div class="footer--col footer-col--mod-1">
+      <a href="index.html"><img class="footer--logo" src="imgs\logo-horizontal_white.svg" alt="Caique Badaró, UX/UI Designer"></a>
+      <p class="body-n1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nulla dolor, rutrum non nisi eu, consectetur pretium enim.</p>
+    </div>
+    <div class="footer--container-links">
+      <div class="footer--col footer-col--mod-2">
+      <p class="caption-n1">Materiais</p>
+      <h6 class="heading-6-n2"><a id="btn-footer--projetos">Projetos</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--posts">Publicações</a></h6>
+    </div>
+    <div class="footer--col footer-col--mod-2">
+      <p class="caption-n1">Meu perfil</p>
+      <h6 class="heading-6-n2"><a id="btn-footer--curriculo">Currículo</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--academico">Acadêmico</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--contato">Contato</a></h6>
+    </div>
+    </div>
+    <div class="footer--col">
+      <button id="btn--footer-back-top" class="btn-primary btn--back-to-top"><img class="icon-btn-back-to-top" src="icons\arrow-up.svg"></button>
+    </div>
+  </div>
+  <div class="footer--col footer--icon-contato">
+    <a href="https://www.linkedin.com/in/caique-badaro/" target="_new"><img class="footer--contato-options-icon" src="icons\linkedin-2.svg" alt="LinkedIn"></a>
+    <a href="https://api.whatsapp.com/send?phone=5531973004150" target="_new"><img class="footer--contato-options-icon" src="icons\whatsapp.svg" alt="WhatsApp"></a>
+    <a href="mailto:caique.badaro@gmail.com" target="_new"><img class="footer--contato-options-icon" src="icons\mail.svg" alt="E-mail"></a>
+  </div>
+  <!-- Divisão footer -->
+  <div class="footer--linha-divisoria"></div>
+  <div class="footer--container">
+    <div class="footer--col direitos-reservados"><p class="caption-n1"><b>&copy; <span id="current-year"></span>Caique Badaró.</b><br>Todos os direitos reservados.</p></div>
+  </div>
+</footer>
+<!-- End Rodapé -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- OwlCarousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/main.js"></script>
+<!-- Scripts incluidos direto na página -->
+<!-- jQuery library -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".custom-carousel").owlCarousel({
+      autoWidth: true,
+      loop: true
+    });
+    $(".custom-carousel .item").click(function () {
+      $(this).toggleClass("active");
+    });
+  });
+</script>
+<!-- Ano vigente -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = currentYear;
+      }
+    });
+</script>
+</body>
+</html>
