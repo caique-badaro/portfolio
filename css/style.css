@@ -160,6 +160,15 @@ p.label-n1 {
   line-height: normal;
 }
 
+/* Label/N2 */
+p.label-n2 {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /* Caption/N1 */
 .caption-n1 {
   color: var(--gray-n-2, #606060);
@@ -348,6 +357,7 @@ p.label-n1 {
     .navbar-right h6.heading-6-n1 {
       padding: 24px 12px;
       margin: 0 32px 0 0;
+      cursor: pointer;
     }
     .navbar-right h6.heading-6-n1:last-child {
       margin-right: 0;
@@ -446,6 +456,7 @@ p.label-n1 {
     .experiencias button {
       margin-right: 8px;
       margin-bottom: 12px;
+      cursor: pointer;
     }
     .botao {
       display: inline-flex;
@@ -603,6 +614,7 @@ p.label-n1 {
       padding: 0px 48px;
       height: 56px;
       border-radius: 80px 80px 80px 80px;
+      cursor: pointer;
     }
     .btn-contato-form:hover {
       border-radius: 80px 80px 80px 80px;
@@ -711,6 +723,7 @@ p.label-n1 {
     .footer--container-links {
       display: flex;
       width: 100%;
+      cursor: pointer;
     }
     .footer--logo {
       width: 140px;
@@ -722,6 +735,7 @@ p.label-n1 {
       width: 40px;
       height: 40px;
       border-radius: 80px;
+      cursor: pointer;
     }
     .footer--linha-divisoria {
       display: flex;
