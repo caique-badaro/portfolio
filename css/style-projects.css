@@ -1,0 +1,363 @@
+/*.----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |  ________    | || |  _________   | || |    _______   | || |  ___  ____   | || |  _________   | || |     ____     | || |   ______     | |
+| | |_   ___ `.  | || | |_   ___  |  | || |   /  ___  |  | || | |_  ||_  _|  | || | |  _   _  |  | || |   .'    `.   | || |  |_   __ \   | |
+| |   | |   `. \ | || |   | |_  \_|  | || |  |  (__ \_|  | || |   | |_/ /    | || | |_/ | | \_|  | || |  /  .--.  \  | || |    | |__) |  | |
+| |   | |    | | | || |   |  _|  _   | || |   '.___`-.   | || |   |  __'.    | || |     | |      | || |  | |    | |  | || |    |  ___/   | |
+| |  _| |___.' / | || |  _| |___/ |  | || |  |`\____) |  | || |  _| |  \ \_  | || |    _| |_     | || |  \  `--'  /  | || |   _| |_      | |
+| | |________.'  | || | |_________|  | || |  |_______.'  | || | |____||____| | || |   |_____|    | || |   `.____.'   | || |  |_____|     | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'*/
+@media (min-width: 1024px) {
+  .super-banner-projects {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #323775 0%, #252958 100%);
+  }
+  .mockup-p1--desktop {
+    opacity: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    height: 100%;
+    width: auto;
+    right: 0;
+    bottom: 0;
+  }
+  .mockup-p1--tablet-mobile {
+    display: none;
+  }
+  .timeline-steps-structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    padding: 12rem 7.5rem 0rem 7.5rem;
+    z-index: 1;
+  }
+  .timeline-steps:hover {
+    border-radius: 0.25rem;
+    border: 1px solid var(--orange-n-1, #F4C284);
+  }
+  .timeline-steps {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    border: 1px solid #ffffff00;
+  }
+  .timeline-steps--icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+  .timeline-steps p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+  }
+  .super-banner-projects--description {
+    display: flex;
+    padding: 2.5rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    z-index: 1;
+  }
+  .super-banner-projects--description .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .heading-special-1 {
+    flex: 1 0 0;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .super-banner-projects--description .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    color: var(--gray-n-3, #CFCFCF);
+    text-align: center;
+  }
+  .super-banner-projects--description .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.8rem 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    width: auto;
+    color: var(--gray-n-3, #CFCFCF);
+    background: var(--gray-n-2, #606060);
+    margin-top: 1rem;
+    margin-left: 0;
+    border: none;
+  }
+}
+
+
+/* .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |  _________   | || |      __      | || |   ______     | || |   _____      | || |  _________   | || |  _________   | |
+| | |  _   _  |  | || |     /  \     | || |  |_   _ \    | || |  |_   _|     | || | |_   ___  |  | || | |  _   _  |  | |
+| | |_/ | | \_|  | || |    / /\ \    | || |    | |_) |   | || |    | |       | || |   | |_  \_|  | || | |_/ | | \_|  | |
+| |     | |      | || |   / ____ \   | || |    |  __'.   | || |    | |   _   | || |   |  _|  _   | || |     | |      | |
+| |    _| |_     | || | _/ /    \ \_ | || |   _| |__) |  | || |   _| |__/ |  | || |  _| |___/ |  | || |    _| |_     | |
+| |   |_____|    | || ||____|  |____|| || |  |_______/   | || |  |________|  | || | |_________|  | || |   |_____|    | |
+| |              | || |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+*/
+@media (min-width: 769px) and (max-width: 1023px) {
+  .super-banner-projects {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #323775 0%, #252958 100%);
+  }
+  .mockup-p1--desktop {
+    display: none;
+  }
+  .mockup-p1--tablet-mobile {
+    opacity: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    height: 50rem;
+    bottom: 0;
+  }
+  .timeline-steps-structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    align-self: stretch;
+    padding: 3rem 3.5rem 7.5rem 3.5rem;
+    z-index: 1;
+  }
+  .timeline-steps:hover {
+    border-radius: 0.25rem;
+    border: 1px solid var(--orange-n-1, #F4C284);
+  }
+  .timeline-steps {
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    border: 1px solid #ffffff00;
+  }
+  .timeline-steps--icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+  .timeline-steps p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+  }
+  .super-banner-projects--description {
+    display: flex;
+    padding: 2.5rem 10%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    z-index: 1;
+  }
+  .super-banner-projects--description .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .heading-special-1 {
+    flex: 1 0 0;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .super-banner-projects--description .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    color: var(--gray-n-3, #CFCFCF);
+    text-align: center;
+  }
+  .super-banner-projects--description .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.8rem 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    width: auto;
+    color: var(--gray-n-3, #CFCFCF);
+    background: var(--gray-n-2, #606060);
+    margin-top: 1rem;
+    margin-left: 0;
+    border: none;
+  }
+  }/* End breakpoint Tablet  */
+
+
+
+/* .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| | ____    ____ | || |     ____     | || |   ______     | || |     _____    | || |   _____      | || |  _________   | |
+| ||_   \  /   _|| || |   .'    `.   | || |  |_   _ \    | || |    |_   _|   | || |  |_   _|     | || | |_   ___  |  | |
+| |  |   \/   |  | || |  /  .--.  \  | || |    | |_) |   | || |      | |     | || |    | |       | || |   | |_  \_|  | |
+| |  | |\  /| |  | || |  | |    | |  | || |    |  __'.   | || |      | |     | || |    | |   _   | || |   |  _|  _   | |
+| | _| |_\/_| |_ | || |  \  `--'  /  | || |   _| |__) |  | || |     _| |_    | || |   _| |__/ |  | || |  _| |___/ |  | |
+| ||_____||_____|| || |   `.____.'   | || |  |_______/   | || |    |_____|   | || |  |________|  | || | |_________|  | |
+| |              | || |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'*/
+@media (max-width: 768px) {
+  .super-banner-projects {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #323775 0%, #252958 100%);
+  }
+  .mockup-p1--desktop {
+    display: none;
+  }
+  .mockup-p1--tablet-mobile {
+    opacity: 50%;
+    mix-blend-mode: multiply;
+    position: absolute;
+    height: auto;
+    width: 150%;
+    bottom: 0;
+  }
+  .timeline-steps-structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    align-self: stretch;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    z-index: 1;
+  }
+  .timeline-steps:hover {
+    border-radius: 0.25rem;
+    border: 1px solid var(--orange-n-1, #F4C284);
+  }
+  .timeline-steps {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.25rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    border: 1px solid #ffffff00;
+  }
+  .timeline-steps--icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+  .timeline-steps p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    font-size: 0.625rem;
+    align-self: stretch;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+  }
+  .super-banner-projects--description {
+    display: flex;
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-top: 40%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    z-index: 1;
+  }
+  .super-banner-projects--description .title {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .heading-special-1 {
+    flex: 1 0 0;
+    color: var(--gray-n-5, #FCFCFC);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .super-banner-projects--description .subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    color: var(--gray-n-3, #CFCFCF);
+    text-align: center;
+  }
+  .subtitle p {
+    font-size: 0.875rem;
+  }
+  .super-banner-projects--description .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.8rem 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    width: auto;
+    color: var(--gray-n-3, #CFCFCF);
+    background: var(--gray-n-2, #606060);
+    margin-top: 1rem;
+    margin-left: 0;
+    border: none;
+  }
+}/* End breakpoint Mobile */
