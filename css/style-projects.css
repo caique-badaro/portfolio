@@ -116,6 +116,109 @@
     margin-left: 0;
     border: none;
   }
+/* Análise mapas de calor */
+  .page-project--hotjar-analytics {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 10rem 12.5rem 7.5rem 12.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.5rem;
+    background: var(--gray-n-4, #ECF0F1);
+    background-image: url('https://caique-badaro.github.io/portfolio/imgs/post-project/bg-motion-map.svg');
+    background-repeat: no-repeat;
+    background-size: 1600px;
+    background-position: center;
+    background-blend-mode: color-burn;
+    back
+  }
+  .page-project--description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .page-project--description .heading-1-n1,
+  .page-project--matriz-csd .heading-1-n1,
+  .page-project--benchmarking .heading-1-n1 {
+    color: var(--gray-n-1: #333);
+    margin-bottom: 0px;
+    text-transform: none;
+  }
+  .page-project--description p,
+  .page-project--matriz-csd p,
+  .page-project--benchmarking p {
+    color: var(--gray-n-2: #606060);
+  }
+  .page-project--description span,
+  .page-project--matriz-csd span,
+  .page-project--benchmarking span {
+    font-weight: 700;
+    color: var(--gray-n-2, #606060);
+  }
+  .cards-heatmap {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    align-self: stretch;
+  }
+  .heatmap-card {
+    display: flex;
+    height: 20rem;
+    max-height: 20rem;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-n-4, #ECF0F1);
+    background: var(--gray-n-5, #FCFCFC);
+    /* Shadow/Card */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .heatmap-card--header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+  }
+  .heatmap-card--header h4 {
+    color: var(--gray-n-2, #606060);
+  }
+  .heatmap-card--image-card {
+    display: flex;
+    height: 12.375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  .heatmap-card--image-card img.image-heatmap {
+    width: 80%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .heatmap-card--btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+  .analyzed-device {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.125rem;
+    flex: 1 0 0;
+    color: var(--gray-n-2, #606060);
+  }
+
 }
 
 
@@ -235,7 +338,112 @@
     margin-left: 0;
     border: none;
   }
-  }/* End breakpoint Tablet  */
+  /* Análise mapas de calor */
+  .page-project--hotjar-analytics {
+    display: flex;
+    padding: 4rem 4.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    background: var(--gray-n-4, #ECF0F1);
+    background-image: url('https://caique-badaro.github.io/portfolio/imgs/post-project/bg-motion-map.svg');
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: center;
+    background-blend-mode: color-burn;
+    back
+  }
+  .page-project--description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .page-project--description .heading-1-n1,
+  .page-project--matriz-csd .heading-1-n1,
+  .page-project--benchmarking .heading-1-n1 {
+    color: var(--gray-n-1: #333);
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-transform: none;
+  }
+  .page-project--description p,
+  .page-project--matriz-csd p,
+  .page-project--benchmarking p {
+    color: var(--gray-n-2: #606060);
+  }
+  .page-project--description span,
+  .page-project--matriz-csd span,
+  .page-project--benchmarking span {
+    font-weight: 700;
+    color: var(--gray-n-2, #606060);
+  }
+  .cards-heatmap {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* Suaviza o scroll no iOS */
+    scroll-snap-type: x mandatory; /* Scroll "snap" para cada cartão */
+  }
+  .heatmap-card {
+    flex: 0 0 75%; /* Largura fixa dos cartões */
+    scroll-snap-align: start; /* Alinha o início do cartão com o início do contêiner de rolagem */
+    display: flex;
+    height: 20rem;
+    max-height: 20rem;
+    padding: 1.5rem;
+    margin: 0.5rem 0.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-n-4, #ECF0F1);
+    background: var(--gray-n-5, #FCFCFC);
+    /* Shadow/Card */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .heatmap-card--header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+  }
+  .heatmap-card--header h4 {
+    color: var(--gray-n-2, #606060);
+  }
+  .heatmap-card--image-card {
+    display: flex;
+    height: 12.375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  .heatmap-card--image-card img.image-heatmap {
+    width: 60%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .heatmap-card--btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+  .analyzed-device {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.125rem;
+    flex: 1 0 0;
+    color: var(--gray-n-2, #606060);
+  }
+}/* End breakpoint Tablet  */
 
 
 
@@ -359,5 +567,110 @@
     margin-top: 1rem;
     margin-left: 0;
     border: none;
+  }
+  /* Análise mapas de calor */
+  .page-project--hotjar-analytics {
+    display: flex;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    background: var(--gray-n-4, #ECF0F1);
+    background-image: url('https://caique-badaro.github.io/portfolio/imgs/post-project/bg-motion-map.svg');
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: center;
+    background-blend-mode: color-burn;
+    back
+  }
+  .page-project--description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .page-project--description .heading-1-n1,
+  .page-project--matriz-csd .heading-1-n1,
+  .page-project--benchmarking .heading-1-n1 {
+    color: var(--gray-n-1: #333);
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-transform: none;
+  }
+  .page-project--description p,
+  .page-project--matriz-csd p,
+  .page-project--benchmarking p {
+    color: var(--gray-n-2: #606060);
+  }
+  .page-project--description span,
+  .page-project--matriz-csd span,
+  .page-project--benchmarking span {
+    font-weight: 700;
+    color: var(--gray-n-2, #606060);
+  }
+  .cards-heatmap {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* Suaviza o scroll no iOS */
+    scroll-snap-type: x mandatory; /* Scroll "snap" para cada cartão */
+  }
+  .heatmap-card {
+    flex: 0 0 75%; /* Largura fixa dos cartões */
+    scroll-snap-align: start; /* Alinha o início do cartão com o início do contêiner de rolagem */
+    display: flex;
+    height: 20rem;
+    max-height: 20rem;
+    padding: 1.5rem;
+    margin: 0.5rem 0.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-n-4, #ECF0F1);
+    background: var(--gray-n-5, #FCFCFC);
+    /* Shadow/Card */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .heatmap-card--header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    align-self: stretch;
+  }
+  .heatmap-card--header h4 {
+    color: var(--gray-n-2, #606060);
+  }
+  .heatmap-card--image-card {
+    display: flex;
+    height: 12.375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  .heatmap-card--image-card img.image-heatmap {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .heatmap-card--btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+  .analyzed-device {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.125rem;
+    flex: 1 0 0;
+    color: var(--gray-n-2, #606060);
   }
 }/* End breakpoint Mobile */
