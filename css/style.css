@@ -12,6 +12,7 @@
   --gray-n-5: #FCFCFC;
   --white-n-1: #FFFFFF;
   --gradiente-n-1: linear-gradient(45deg, #84B6F4 0%, #CDABEC 25%, #FCA5C9 49.48%, #FFAD9F 76.04%, #FFAD9E 76.05%, #F4C284 100%);
+  --gradiente-n-3: linear-gradient(180deg, #84B6F4 0%, #407DC9 100%);
 }
 
 img.white-icon {
