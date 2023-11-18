@@ -7,12 +7,13 @@
   --blue-n-1: #84B6F4;
   --gray-n-1: #333;
   --gray-n-2: #606060;
+  --gray-n-2-1: #9F9F9F;
   --gray-n-3: #CFCFCF;
   --gray-n-4: #ECF0F1;
   --gray-n-5: #FCFCFC;
   --white-n-1: #FFFFFF;
   --gradiente-n-1: linear-gradient(45deg, #84B6F4 0%, #CDABEC 25%, #FCA5C9 49.48%, #FFAD9F 76.04%, #FFAD9E 76.05%, #F4C284 100%);
-  --gradiente-n-3: linear-gradient(180deg, #84B6F4 0%, #407DC9 100%);
+  --gradiente-n-3: linear-gradient(180deg, #1C62BA 0%, #3074C8 100%);
 }
 
 img.white-icon {
@@ -341,7 +342,7 @@ p.label-n2 {
       margin-right: 0px;
       margin-left: 0px;
       padding: 12px 80px 12px 80px;
-      z-index: 9999;
+      z-index: 9995;
       background: rgba(255, 255, 255, 0.40);
       backdrop-filter: blur(20px);
     }
