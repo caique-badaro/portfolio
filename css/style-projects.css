@@ -452,6 +452,214 @@
   .btn-card-matriz-csd button {
     cursor: pointer;
   }
+/* Estilos para o popup Matriz CSD */
+  .popup-matriz-csd {
+    display: none;
+    position: fixed;
+    left: 2.5%;
+    bottom: 0;
+    max-height: 85vh;
+    overflow-y: auto;
+    height: auto;
+    width: 95%;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    border: 1px solid var(--gray-n-3);
+    border-bottom: 0px;
+    background: var(--gray-n-5);
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .popup-matriz-csd::-webkit-scrollbar {
+      display: none;
+  }
+  .popup-matriz-csd .popup-content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .popup-matriz-csd .popup-content .page-project--description--matriz-resume {
+    display: flex;
+    padding: 4rem 5% 3rem 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-header-data {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .data-matriz {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1rem;
+    border-color: var(--gray-n-5);
+    background: var(--gray-n-4);
+    color: var(--gray-n-2);
+    height: 2rem;
+    width: auto;
+  }
+  .popup-matriz-csd .close-modal {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 5rem;
+    background: var(--gray-n-3);
+    cursor: pointer;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom {
+    display: flex;
+    padding: 5rem 0rem;
+    align-items: center;
+    gap: 4rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz .title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz img{
+    width: 2rem;
+    height: auto;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz .matriz-csd-example {
+    display: flex;
+    height: auto;
+    padding: 2.5rem 0rem 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom .col-page-project-matriz .matriz-csd-example .col-matriz {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(1) {
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    background: #F2FCF1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(2) {
+    border-radius: 0;
+    background: #FEFCEF;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(3) {
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    background: #FFF1F1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header {
+    display: flex;
+    padding: 2rem 1rem 0 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header p {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz img {
+    width: 70%;
+    padding: 2rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .label-matriz {
+    width: 100%;
+    text-align: center;
+    color: var(--gray-n-2-1);
+  }
+  /* Configurar versão 2 do popup */
+  .popup-matriz-csd .row-matriz-description-column-left-to-right {
+    display: flex;
+    padding-top: 80px;
+    align-items: center;
+    gap: 4rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz .title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .hipoteses-matriz-csd {
+    width: 100%;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .pesquisa-matriz-csd {
+    width: 100%;
+    margin-bottom: -3rem;
+    border-radius: 1rem;
+  }
+/* Fim ajuste popup matriz CSD */
 /* Benchmarking steps */
   .page-project--benchmarking {
     display: flex;
@@ -765,7 +973,132 @@
     font-weight: 700;
     line-height: normal;
   }
-
+/* FAQ Projeto */
+  .page-project--faq {
+    display: flex;
+    padding: 7.5rem 18%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .faq-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .faq-title h2 {
+    align-self: stretch;
+    color: var(--gray-n-1);
+    text-transform: none;
+  }
+  .faq-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .faq-open {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--blue-n-1);
+    background: var(--gray-n-5);
+    cursor: pointer;
+  }
+  .faq-open .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  /* Faq default */
+  .faq-default {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-n-4);
+    background: var(--gray-n-4);
+    cursor: pointer;
+  }
+  .faq-default:hover {
+    border: 1px solid var(--blue-n-1);
+  }
+  .faq-default .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .faq-default .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--gray-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .faq-default .faq-title-doubt .open-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-default .faq-title-doubt .close-faq-option {
+    display: none;
+  }
+  .faq-default .faq-paragraph-doubt {
+    display: none;
+  }
+  /* Fim Faq default */
+  .faq-open .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--blue-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .faq-open .faq-title-doubt .close-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-open .faq-title-doubt .open-faq-option {
+    display: none;
+  }
+  .faq-open .faq-paragraph-doubt {
+    display: flex;
+    padding-bottom: 0px;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .faq-open .faq-paragraph-doubt p.body-n1 {
+    color: var(--gray-n-2)
+    flex: 1 0 0;
+  }
 }
 
 
@@ -1226,6 +1559,232 @@
   .btn-card-matriz-csd button {
     cursor: pointer;
   }
+/* Estilos para o popup Matriz CSD */
+  .popup-matriz-csd {
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    left: 2.5%;
+    max-height: 70vh;
+    overflow-y: auto;
+    height: auto;
+    width: 95%;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    border: 1px solid var(--gray-n-3);
+    border-bottom: 0;
+    border-bottom: 0px;
+    background: var(--gray-n-5);
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .popup-matriz-csd::-webkit-scrollbar {
+      display: none;
+  }
+  .popup-matriz-csd .popup-content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  .popup-matriz-csd .popup-content .page-project--description--matriz-resume {
+    display: flex;
+    padding: 4rem 4rem 2rem 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-header-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .data-matriz {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1rem;
+    border-color: var(--gray-n-5);
+    background: var(--gray-n-4);
+    color: var(--gray-n-2);
+    height: 2rem;
+    width: auto;
+  }
+  .popup-matriz-csd .close-modal {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 5rem;
+    background: var(--gray-n-3);
+    cursor: pointer;
+  }
+  .popup-matriz-csd .close-modal img {
+    width: 1rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .title .heading-1-n1 {
+    font-size: 1.25rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz img{
+    width: 2rem;
+    height: auto;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .matriz-csd-example {
+    display: flex;
+    padding: 2.5rem 0rem 1rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(1) {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    background: #F2FCF1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(2) {
+    border-radius: 0;
+    background: #FEFCEF;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(3) {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    background: #FFF1F1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+    padding-top: 1rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header p {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz img {
+    width: 60%;
+    padding: 1rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .label-matriz {
+    width: 100%;
+    text-align: center;
+    color: var(--gray-n-2-1);
+  }
+  /* Configurar versão 2 do popup */
+  .popup-matriz-csd .row-matriz-description-column-left-to-right {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .hipoteses-matriz-csd {
+    width: 100%;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .pesquisa-matriz-csd {
+    width: 100%;
+    margin-bottom: -3rem;
+    border-radius: 1rem;
+  }
+/* Fim ajuste popup matriz CSD */
 /* Benchmarking steps */
   .page-project--benchmarking {
     display: flex;
@@ -1536,6 +2095,134 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+/* FAQ Projeto */
+  .page-project--faq {
+    display: flex;
+    padding: 7.5rem 8%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .faq-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .faq-title h2 {
+    align-self: stretch;
+    color: var(--gray-n-1);
+    font-size: 1.25rem;
+    text-transform: none;
+    margin: 1rem;
+  }
+  .faq-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .faq-open {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--blue-n-1);
+    background: var(--gray-n-5);
+    cursor: pointer;
+  }
+  .faq-open .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  /* Faq default */
+  .faq-default {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-n-4);
+    background: var(--gray-n-4);
+    cursor: pointer;
+  }
+  .faq-default:hover {
+    border: 1px solid var(--blue-n-1);
+  }
+  .faq-default .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .faq-default .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--gray-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .faq-default .faq-title-doubt .open-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-default .faq-title-doubt .close-faq-option {
+    display: none;
+  }
+  .faq-default .faq-paragraph-doubt {
+    display: none;
+  }
+  /* Fim Faq default */
+  .faq-open .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--blue-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .faq-open .faq-title-doubt .close-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-open .faq-title-doubt .open-faq-option {
+    display: none;
+  }
+  .faq-open .faq-paragraph-doubt {
+    display: flex;
+    padding-bottom: 0px;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .faq-open .faq-paragraph-doubt p.body-n1 {
+    color: var(--gray-n-2)
+    flex: 1 0 0;
   }
 }/* End breakpoint Tablet  */
 
@@ -2003,6 +2690,231 @@
   .btn-card-matriz-csd button {
     cursor: pointer;
   }
+/* Estilos para o popup Matriz CSD */
+  .popup-matriz-csd {
+    display: none;
+    position: fixed;
+    bottom: 5rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    height: auto;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    border: 1px solid var(--gray-n-3);
+    border-bottom: 0;
+    border-bottom: 0px;
+    background: var(--gray-n-5);
+    z-index: 999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .popup-matriz-csd::-webkit-scrollbar {
+      display: none;
+  }
+  .popup-matriz-csd .popup-content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding: 0;
+  }
+  .popup-matriz-csd .popup-content .page-project--description--matriz-resume {
+    display: flex;
+    padding: 2.5rem 2rem 2rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-header-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .data-matriz {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1 0 0;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .tag-info-adicional {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 1rem;
+    border-color: var(--gray-n-5);
+    background: var(--gray-n-4);
+    color: var(--gray-n-2);
+    height: 2rem;
+    width: auto;
+  }
+  .popup-matriz-csd .close-modal {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 5rem;
+    background: var(--gray-n-3);
+    cursor: pointer;
+  }
+  .popup-matriz-csd .close-modal img {
+    width: 1rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .title .heading-1-n1 {
+    font-size: 1.25rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz img{
+    width: 2rem;
+    height: auto;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom
+  .col-page-project-matriz .matriz-csd-example {
+    display: flex;
+    padding: 2.5rem 0rem 1rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(1) {
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    background: #F2FCF1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(2) {
+    border-radius: 0;
+    background: #FEFCEF;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz:nth-child(3) {
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+    background: #FFF1F1;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz .header p {
+    color: var(--gray-n-2);
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .matriz-csd-example .col-matriz img {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .popup-matriz-csd .row-matriz-description-column-top-to-bottom 
+  .col-page-project-matriz .label-matriz {
+    width: 100%;
+    text-align: center;
+    color: var(--gray-n-2-1);
+  }
+  /* Configurar versão 2 do popup */
+  .popup-matriz-csd .row-matriz-description-column-left-to-right {
+    display: flex;
+    padding: 1rem 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right 
+  .col-page-project-matriz .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.75rem;
+    align-self: stretch;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .body-n1 {
+    color: var(--gray-n-2);
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .hipoteses-matriz-csd {
+    width: 100%;
+  }
+
+  .popup-matriz-csd .row-matriz-description-column-left-to-right
+  .col-page-project-matriz .pesquisa-matriz-csd {
+    width: 100%;
+    margin-bottom: -3rem;
+    border-radius: 1rem;
+  }
+/* Fim ajuste popup matriz CSD */
+
 /* Benchmarking steps */
   .page-project--benchmarking {
     display: flex;
@@ -2316,5 +3228,133 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+/* FAQ Projeto */
+  .page-project--faq {
+    display: flex;
+    padding: 7.5rem 8%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .faq-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    align-self: stretch;
+  }
+  .faq-title h2 {
+    align-self: stretch;
+    color: var(--gray-n-1);
+    font-size: 1.25rem;
+    text-transform: none;
+    margin-bottom: 1rem;
+  }
+  .faq-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+  }
+  .faq-open {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--blue-n-1);
+    background: var(--gray-n-5);
+    cursor: pointer;
+  }
+  .faq-open .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  /* Faq default */
+  .faq-default {
+    display: flex;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-n-4);
+    background: var(--gray-n-4);
+    cursor: pointer;
+  }
+  .faq-default:hover {
+    border: 1px solid var(--blue-n-1);
+  }
+  .faq-default .faq-title-doubt {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+  }
+  .faq-default .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--gray-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .faq-default .faq-title-doubt .open-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-default .faq-title-doubt .close-faq-option {
+    display: none;
+  }
+  .faq-default .faq-paragraph-doubt {
+    display: none;
+  }
+  /* Fim Faq default */
+  .faq-open .faq-title-doubt h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: var(--blue-n-1);
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .faq-open .faq-title-doubt .close-faq-option {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .faq-open .faq-title-doubt .open-faq-option {
+    display: none;
+  }
+  .faq-open .faq-paragraph-doubt {
+    display: flex;
+    padding-bottom: 0px;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .faq-open .faq-paragraph-doubt p.body-n1 {
+    color: var(--gray-n-2)
+    flex: 1 0 0;
   }
 }/* End breakpoint Mobile */
