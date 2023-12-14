@@ -44,6 +44,7 @@
   .timeline-steps:hover {
     border-radius: 0.25rem;
     border: 1px solid var(--orange-n-1, #F4C284);
+    cursor: pointer;
   }
   .timeline-steps {
     display: flex;
@@ -1147,6 +1148,7 @@
   .timeline-steps:hover {
     border-radius: 0.25rem;
     border: 1px solid var(--orange-n-1, #F4C284);
+    cursor: pointer;
   }
   .timeline-steps {
     display: flex;
@@ -2273,6 +2275,7 @@
   .timeline-steps:hover {
     border-radius: 0.25rem;
     border: 1px solid var(--orange-n-1, #F4C284);
+    cursor: pointer;
   }
   .timeline-steps {
     display: flex;
