@@ -1,3 +1,69 @@
+// Ocultar e exibir menu desktop primeira quebra de página
+// Seleciona os elementos da DOM
+const superBannerProjects = document.querySelector('.super-banner-projects');
+const navbarProjects = document.querySelector('.navbar');
+
+// Define as opções para o Intersection Observer
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1 // 10% visível
+};
+
+// Cria o Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Quando a super-banner estiver visível, oculta a navbar
+      navbarProjects.style.display = 'none';
+    } else {
+      // Quando a super-banner não estiver visível, restaura a navbar para o estado original
+      navbarProjects.style.display = '';
+    }
+  });
+}, options);
+
+// Observa a super-banner
+observer.observe(superBannerProjects);
+// Fim do script
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// âncoras de scroll nos componentes do site
+// Função para realizar o scroll suave para um elemento com o ID especificado
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    window.scrollTo({
+      behavior: 'smooth',
+      top: element.offsetTop
+    });
+  }
+}
+
+// Adiciona um evento de clique a qualquer elemento com um ID específico para fazer o scroll
+function addSmoothScrollListener(elementId, scrollToId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.addEventListener('click', () => {
+      scrollToElement(scrollToId);
+    });
+  }
+}
+
+// Scroll ao clicar no elemento
+addSmoothScrollListener('timeline-steps--analise', 'section--hotjar-analytics');
+addSmoothScrollListener('timeline-steps--pesquisa', 'section--matriz-csd');
+addSmoothScrollListener('timeline-steps--benchmarking', 'section--benchmarking');
+addSmoothScrollListener('timeline-steps--project-home-ap-ago22', 'section--project-home-ap-ago22');
+addSmoothScrollListener('timeline-steps--results-home-ap-ago22', 'section--results-home-ap-ago22');
+addSmoothScrollListener('btn--footer-back-top', 'super-banner--home-ap-ago-22');
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Função para exibir popup
 function openPopup(popupId) {
     const popup = document.getElementById(popupId);
