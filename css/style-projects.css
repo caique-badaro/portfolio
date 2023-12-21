@@ -819,22 +819,25 @@
   .col-page-project-presentation .description span {
     font-weight: 700;
   }
-  .cta-btn-proto {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    padding-top: 1.5rem;
-  }
-  .cta-btn-proto .btn-primary {
+  .iframe-figma-desktop-home-ap-ago-22 {
+    margin-top: 24px;
+    width: 100%;
+    height: 70vh;
     color: var(--gray-n-1);
-    cursor: pointer;
-    min-width: 120px;
+    z-index: 999;
+  }
+  .iframe-figma-mobile-home-ap-ago-22 {
+    margin-top: 24px;
+    width: 360px;
+    height: 80vh;
+    color: var(--gray-n-1);
+    z-index: 999;
   }
   .image-mockup-home-apoio {
     width: 80%;
     align-items: center;
     height: auto;
-    margin-top: -56px;
+    margin-top: -560px;
     margin-bottom: -4px;
   }
   .image-mockup-home-apoio #mockup-projeto--home-ap-08-2023--mobile {
@@ -2365,7 +2368,6 @@
     background-size: 1200px;
     background-position: center;
     background-blend-mode: color-burn;
-    back
   }
   .page-project--description {
     display: flex;
