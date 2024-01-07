@@ -5,6 +5,7 @@
   --orange-n-1: #F4C284;
   --orange-n-2: #FF9470;
   --blue-n-1: #84B6F4;
+  --red-n-1: #BB0707;
   --gray-n-1: #333;
   --gray-n-2: #606060;
   --gray-n-2-1: #9F9F9F;
@@ -609,6 +610,15 @@ p.label-n2 {
     }
     .input--contato:focus {
       border: 1px solid var(--orange-n-1);
+    }
+    #errorText {
+      display: none;
+      color: var(--red-n-1, #BB0707);
+      margin-top: -4px;
+      padding-left: 16px;
+    }
+    #successMessage {
+      display: none;
     }
     .btn-contato-form {
       width: 100%;
