@@ -155,5 +155,40 @@ sections.forEach(item => {
       };   
 // Fim do script.
 
+// Start - Enviar formulário contato
+
+  function submitForm() {
+  const nome = document.getElementById('nameFormCBport').value;
+  const email = document.getElementById('mailFormCBport').value;
+
+  // Verificar se o e-mail é válido antes de enviar
+  if (!isValidEmail(email)) {
+    document.getElementById('errorText').style.display = 'block';
+    document.getElementById('successMessage').style.display = 'none';
+    return;
+  } else {
+    document.getElementById('errorText').style.display = 'none';
+  }
+
+  // Enviar os dados para o Google Apps Script
+  google.script.run.withSuccessHandler(alertSuccess).withFailureHandler(alertError).salvarDados(nome, email);
+}
+
+function alertSuccess(response) {
+  document.getElementById('successMessage').style.display = 'block';
+  document.getElementById('errorText').style.display = 'none';
+}
+
+function alertError(error) {
+  alert('Erro ao enviar dados: ' + error.message);
+}
+
+function isValidEmail(email) {
+  // Expressão regular para validar o formato de e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+// End - Enviar formulário contato
+
 
       
