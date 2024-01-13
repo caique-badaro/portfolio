@@ -155,40 +155,91 @@ sections.forEach(item => {
       };   
 // Fim do script.
 
-// Start - Enviar formulário contato
 
-  function submitForm() {
-  const nome = document.getElementById('nameFormCBport').value;
-  const email = document.getElementById('mailFormCBport').value;
 
-  // Verificar se o e-mail é válido antes de enviar
-  if (!isValidEmail(email)) {
-    document.getElementById('errorText').style.display = 'block';
-    document.getElementById('successMessage').style.display = 'none';
-    return;
-  } else {
-    document.getElementById('errorText').style.display = 'none';
+// Start - Script Formulário página Home
+  function enviarFormulario() {
+    var emailInput = document.getElementById("mailHomeForm").value;
+    var emailAlert = document.getElementById("emailAlert");
+    var btnContato = document.getElementById("btn-contato-form");
+    var mensagemFeedback = document.getElementById("mensagemFeedback");
+
+    // Desabilitar o botão se o e-mail estiver vazio ou incorreto
+    if (emailInput === "" || !validarEmail(emailInput)) {
+      emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
+      mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
+      return;
+    }
+
+    // Limpar o alerta e a mensagem de feedback se o e-mail estiver correto
+    emailAlert.innerText = "";
+    mensagemFeedback.innerText = "";
+
+    // Alterar classe e desabilitar o botão
+    btnContato.classList.remove("btn-primary");
+    btnContato.classList.add("btn-primary-disabled");
+    btnContato.disabled = true;
+
+    // Enviar os dados para o script do Google Apps
+    google.script.run.withSuccessHandler(function(response) {
+      // Exibe a mensagem de feedback abaixo do botão em caso de sucesso
+      mensagemFeedback.innerText = "Envio concluído com sucesso!";
+      // Reativar o botão
+      btnContato.classList.remove("btn-primary-disabled");
+      btnContato.classList.add("btn-primary");
+      btnContato.disabled = false;
+    }).withFailureHandler(function(error) {
+      // Exibe a mensagem de feedback abaixo do botão em caso de falha
+      mensagemFeedback.innerText = "Ops, ocorreu algo inesperado. Por favor, tente novamente.";
+      // Reativar o botão
+      btnContato.classList.remove("btn-primary-disabled");
+      btnContato.classList.add("btn-primary");
+      btnContato.disabled = false;
+    }).doPost({mailHomeForm: emailInput});
   }
 
-  // Enviar os dados para o Google Apps Script
-  google.script.run.withSuccessHandler(alertSuccess).withFailureHandler(alertError).salvarDados(nome, email);
-}
+  function validarEmail(email) {
+    // Adicione a mesma lógica de validação de e-mail usada no script do Google Apps
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
 
-function alertSuccess(response) {
-  document.getElementById('successMessage').style.display = 'block';
-  document.getElementById('errorText').style.display = 'none';
-}
+  function validarEmailNoInput() {
+    var emailInput = document.getElementById("mailHomeForm").value;
+    var emailAlert = document.getElementById("emailAlert");
+    var btnContato = document.getElementById("btn-contato-form");
+    var mensagemFeedback = document.getElementById("mensagemFeedback");
 
-function alertError(error) {
-  alert('Erro ao enviar dados: ' + error.message);
-}
+    // Desabilitar o botão se o e-mail estiver vazio ou incorreto
+    if (emailInput === "" || !validarEmail(emailInput)) {
+      emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver incorreto ou vazio
+      btnContato.classList.remove("btn-primary");
+      btnContato.classList.add("btn-primary-disabled");
+      btnContato.disabled = true;
+      mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
+    } else {
+      emailAlert.innerText = "Tudo certo, e-mail válido";
+      btnContato.classList.remove("btn-primary-disabled");
+      btnContato.classList.add("btn-primary");
+      btnContato.disabled = false; // Reativar o botão se o e-mail estiver correto
+    }
+  }
 
-function isValidEmail(email) {
-  // Expressão regular para validar o formato de e-mail
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-// End - Enviar formulário contato
+  function validarEmailNoBlur() {
+    var emailInput = document.getElementById("mailHomeForm").value;
+    var emailAlert = document.getElementById("emailAlert");
 
+    // Exibir feedback de preenchimento correto ao sair do campo de e-mail
+    if (emailInput !== "") {
+      if (validarEmail(emailInput)) {
+        emailAlert.innerText = "Tudo certo, e-mail válido";
+      } else {
+        emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
+      }
+    } else {
+      emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver vazio
+    }
+  }
+// Fim - Script Formulário página Home
 
       
