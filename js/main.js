@@ -195,7 +195,7 @@ sections.forEach(item => {
       btnContato.classList.remove("btn-primary-disabled");
       btnContato.classList.add("btn-primary");
       btnContato.disabled = false;
-    }).doPost({mailHomeForm: emailInput});
+    }).doPost({ mailHomeForm: emailInput });
   }
 
   function validarEmail(email) {
