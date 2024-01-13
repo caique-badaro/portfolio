@@ -556,13 +556,13 @@
         <!-- End Coluna -->
         <!-- Coluna -->
         <div class="contato--col--form">
-          <form class="form--contato" onsubmit="event.preventDefault(); submitForm()">
+          <form class="form--contato" id="formHomePort">
             <p class="body-n1 contato--type-form">Ou se preferir, deixe seu contato</p>
-            <p class="body-n1"><input class="input--contato" type="text" id="nameFormCBport" placeholder="Qual o seu nome?"></p>
-            <p class="body-n1"><input class="input--contato" type="email" id="mailFormCBport" placeholder="Informe o seu e-mail"></p>
-            <span id="errorText" class="caption-n2">E-mail inválido, revise os dados e tente novamente</span>
-            <button class="btn-primary btn-contato-form" type="submit">Enviar</button>
-            <span id="successMessage" class="heading-6-n1">Dados enviados com sucesso!</span>
+            <p class="body-n1"><input class="input--contato" type="text" id="nameFormHome" placeholder="Qual o seu nome?"></p>
+            <p class="body-n1"><input class="input--contato" type="email" id="mailHomeForm" placeholder="Informe o seu e-mail" oninput="validarEmailNoInput()" onblur="validarEmailNoBlur()"></p>
+            <p class="alert" id="emailAlert"></p>
+            <button class="btn-primary btn-primary-disabled" id="btn-contato-form" onclick="enviarFormulario()" disabled>Enviar</button>
+            <p class="mensagem" id="mensagemFeedback"></p>
           </form>
         </div>
         <!-- End Coluna -->
