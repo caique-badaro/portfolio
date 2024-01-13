@@ -183,14 +183,14 @@ sections.forEach(item => {
     // Enviar os dados para o script do Google Apps
     google.script.run.withSuccessHandler(function(response) {
       // Exibe a mensagem de feedback abaixo do botão em caso de sucesso
-      mensagemFeedback.innerText = "Envio concluído com sucesso!";
+      mensagemFeedback.innerText = response;
       // Reativar o botão
       btnContato.classList.remove("btn-primary-disabled");
       btnContato.classList.add("btn-primary");
       btnContato.disabled = false;
     }).withFailureHandler(function(error) {
       // Exibe a mensagem de feedback abaixo do botão em caso de falha
-      mensagemFeedback.innerText = "Ops, ocorreu algo inesperado. Por favor, tente novamente.";
+      mensagemFeedback.innerText = error;
       // Reativar o botão
       btnContato.classList.remove("btn-primary-disabled");
       btnContato.classList.add("btn-primary");
