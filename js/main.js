@@ -117,7 +117,7 @@ sections.forEach(item => {
 
 
 // Bloco de conteúdo dinâmico
-    indow.onload = function() {
+    window.onload = function() {
       exibirConteudo(document.getElementById("botao1"));
     };
 
@@ -209,25 +209,25 @@ sections.forEach(item => {
   }
 
   function validarEmailNoInput() {
-    var emailInput = document.getElementById("mailHomeForm").value;
-    var emailAlert = document.getElementById("emailAlert");
-    var btnContato = document.getElementById("btn-contato-form");
-    var mensagemFeedback = document.getElementById("mensagemFeedback");
+  var emailInput = document.getElementById("mailHomeForm").value;
+  var emailAlert = document.getElementById("emailAlert");
+  var btnContato = document.getElementById("btn-contato-form");
+  var mensagemFeedback = document.getElementById("mensagemFeedback");
 
-    // Desabilitar o botão se o e-mail estiver vazio ou incorreto
-    if (emailInput === "" || !validarEmail(emailInput)) {
-      emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver incorreto ou vazio
-      btnContato.classList.remove("btn-primary");
-      btnContato.classList.add("btn-primary-disabled");
-      btnContato.disabled = true;
-      mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
-    } else {
-      emailAlert.innerText = "Tudo certo, e-mail válido";
-      btnContato.classList.remove("btn-primary-disabled");
-      btnContato.classList.add("btn-primary");
-      btnContato.disabled = false; // Reativar o botão se o e-mail estiver correto
-    }
+  // Desabilitar o botão se o e-mail estiver vazio ou incorreto
+  if (emailInput === "" || !validarEmail(emailInput)) {
+    emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver incorreto ou vazio
+    btnContato.classList.remove("btn-primary");
+    btnContato.classList.add("btn-primary-disabled");
+    btnContato.disabled = true;
+    mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
+  } else {
+    emailAlert.innerText = "Tudo certo, e-mail válido";
+    btnContato.classList.remove("btn-primary-disabled");
+    btnContato.classList.add("btn-primary");
+    btnContato.disabled = false; // Reativar o botão se o e-mail estiver correto
   }
+}
 
   function validarEmailNoBlur() {
     var emailInput = document.getElementById("mailHomeForm").value;
