@@ -158,6 +158,10 @@ sections.forEach(item => {
 
 
 // Start - Script Formulário página Home
+
+  var url = 'https://script.google.com/macros/s/AKfycbxPi9hnp6P-cBKz86fJm6_KEutGXRvnGTDsBd9zVyk/exec';
+
+
   function enviarFormulario() {
     var emailInput = document.getElementById("mailHomeForm").value;
     var emailAlert = document.getElementById("emailAlert");
