@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caique Badaró, UX/UI</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon//favicon-16x16.png">
+  <link rel="manifest" href="imgs/favicon//site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-projects.css">
+  <!-- Animações -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Hotjar Tracking Code for my site -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2416068,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+</head>
+<body>
+  <!-- Navbar desktop -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <a href="index.html"><img src="imgs\logo-horizontal_gray-n2.svg" alt="Caique Badaró"></a>
+    </div>
+    <div class="navbar-right">
+      <h6 class="heading-6-n1"><a href="index.html">Home</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--analitycs-project">Análise</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--results-project">Resultado</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--faq-projects">FAQ</a></h6>
+      <h6 class="heading-6-n1"><a id="btn--navbar--contato">Contato</a></h6>
+    </div>
+  </div>
+  <!-- End Navbar desktop -->
+  <!-- Bottom bar mobile/tablet -->
+  <div class="bottom-bar">
+    <div class="bottom-bar--container">
+      <!-- Navegação botões-->
+      <div class="bottom-bar--col">
+        <a href="index.html">
+          <button class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\home.svg" alt="Página inicial">
+            <p class="label-n1">Home</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col">
+        <a>
+          <button id="btn--botton-bar--analitycs-project" class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\bench-analytics.svg" alt="Análise">
+            <p class="label-n1">Análise</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col">
+        <a>
+          <button id="btn--botton-bar--results-project" class="bottom-bar--btn">
+            <img class="bottom-bar--icon" src="icons\data-base.svg" alt="Resultado">
+            <p class="label-n1">Resultado</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col" id="contatoCol">
+        <a>
+          <button class="bottom-bar--btn" id="contatoButton">
+            <img class="bottom-bar--icon" src="icons\talk.svg" alt="Contato">
+            <p class="label-n1">Contato</p>
+          </button>
+        </a>
+      </div>
+      <div class="bottom-bar--col">
+        <a>
+          <button class="bottom-bar--btn" id="btn--bottom-bar--faq-projects">
+            <img class="bottom-bar--icon" src="icons\help.svg" alt="Dúvidas">
+            <p class="label-n1">FAQ</p>
+          </button>
+        </a>
+      </div>
+      <!-- Menu pop-up mobile e tablet -->
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <div class="popup--container-mobile">
+            <div class="popup--row-mobile-close"><button id="closeButton" class="popup--close-btn"><img src="icons\close.svg"></button></div>
+            <img class="popup--logo--mobile" src="imgs\logo-block_black.svg" alt="Caique Badaró, UX/UI Designer">
+            <div class="popup--row-mobile">
+              <!-- <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">01. </span>Projetos</h2></a> -->
+              <a id="btn-popup--curriculo"><h2 class="heading-2-n1"><span class="caption-n1">01. </span>Experiências</h2></a>
+              <a id="btn-popup--academico"><h2 class="heading-2-n1"><span class="caption-n1">02. </span>Acadêmico</h2></a>
+              <!-- <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">04. </span>Publicações</h2></a>
+              <a href="#"><h2 class="heading-2-n1"><span class="caption-n1">05. </span>Contato</h2></a> -->
+            </div>
+            <div class="popup--row-mobile">
+              <p class="caption-n1"><b>&copy; <span class="current-year"></span> - Caique Badaró.</b><br>Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Popup Contato -->
+      <div class="popup" id="popup--contato--bottom-bar">
+        <div class="popup-content--contato">
+          <div class="popup--container-mobile">
+            <div class="popup--row-mobile-close"><button id="closeButtonContato" class="popup--close-btn"><img src="icons\close.svg"></button></div>
+            <img class="popup--logo--mobile" src="imgs\logo-block_black.svg" alt="Caique Badaró, UX/UI Designer">
+            <div class="popup--row-mobile--contato">
+              <a href="https://www.linkedin.com/in/caique-badaro/" target="_new"><img class="contato-popup--icon" src="icons\linkedin-2.svg" alt="LinkedIn"></a>
+              <a href="https://api.whatsapp.com/send?phone=5531973004150" target="_new"><img class="contato-popup--icon" src="icons\whatsapp.svg" alt="WhatsApp"></a>
+              <a href="mailto:caique.badaro@gmail.com" target="_new"><img class="contato-popup--icon" src="icons\mail.svg" alt="E-mail"></a>
+            </div>
+            <div class="popup--row-mobile">
+              <p class="caption-n1"><b>&copy; <span class="current-year"></span> - Caique Badaró.</b><br>Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End navegação botões -->
+    </div>
+  </div>
+<!-- End bottom bar -->
+<!-- Super banner projects -->
+  <div id="super-banner--home-ap-ago-22" class="super-banner-projects">
+      <img class="mockup-p1--desktop" src="imgs/post-project/hand-mockups_phone.png">
+      <img class="mockup-p1--tablet-mobile" src="imgs/post-project/hand-mockups_phone_mobile.png">
+      <div class="timeline-steps-structure">
+        <!-- linha do tempo, passo 1 -->
+          <div id="timeline-steps--analise" class="timeline-steps">
+            <img class="timeline-steps--icon" src="icons\bench-analytics_white.svg" alt="Análise mapas de calor">
+            <p class="label-n1">Análise</p>
+          </div>
+        <!-- linha do tempo, passo 2 -->
+          <div id="timeline-steps--pesquisa" class="timeline-steps">
+            <img class="timeline-steps--icon" src="icons\mapping_white.svg" alt="Pesquisa com usuários">
+            <p class="label-n1">Pesquisa</p>
+          </div>
+        <!-- linha do tempo, passo 3 -->
+          <div id="timeline-steps--benchmarking" class="timeline-steps">
+            <img class="timeline-steps--icon" src="icons\bench-search_white.svg" alt="Benchmarking e pesquisa de mercado">
+            <p class="label-n1">Mercado</p>
+          </div>
+        <!-- linha do tempo, passo 4 -->
+          <div id="timeline-steps--project-home-ap-ago22" class="timeline-steps">
+            <img class="timeline-steps--icon" src="icons\light_white.svg" alt="Apresentação do projeto">
+            <p class="label-n1">Projeto</p>
+          </div>
+        <!-- linha do tempo, passo 5 -->
+          <div id="timeline-steps--results-home-ap-ago22" class="timeline-steps">
+            <img class="timeline-steps--icon" src="icons\data-base_white.svg" alt="Resultados alcançados com o projeto">
+            <p class="label-n1">Resultado</p>
+          </div>
+      </div>
+      <div class="super-banner-projects--description">
+        <div class="title"><h1 class="heading-special-1">Página inicial site Apoio Entrega.</h1></div>
+        <div class="subtitle">
+          <p class="heading-5-n1">Objetivo: melhorar a percepção do site como uma plataforma de preços competitivos e promoções impactantes.</p>
+          <button class="tag-info-adicional caption-n1">
+            <img src="icons\calendar_today_white.svg" alt="Ícone"><span>Agosto de 2022</span>
+          </button>
+        </div>
+      </div> 
+  </div>
+<!-- End super banner projects -->
+<!-- Análise mapas de calor -->
+  <div id="section--hotjar-analytics" class="page-project--hotjar-analytics">
+    <div class="page-project--description">
+      <h2 class="heading-1-n1">Análise mapas de calor</h2>
+      <p class="body-n1">A análise abaixo ajudou a <span>compreender onde os usuários estão mais engajados ou encontram maior interesse na página</span> inicial do site Apoio Entrega (2022), permitindo a otimização do design para alcançar os objetivos deste projeto.</p>
+      <p>Os mapas de calor são ferramentas de análise de interação do usuário em um site ou aplicativo. Eles representam visualmente padrões de comportamento, como cliques, movimento do mouse ou scroll (rolagem), utilizando cores para indicar áreas de maior ou menor atividade.</p>
+    </div>
+    <div class="cards-heatmap">
+      <!-- Card #1 -->
+      <div class="heatmap-card" id="heatmap-card--order-1">
+        <!-- header card -->
+        <div class="heatmap-card--header">
+          <img src="icons\click.svg" alt="mapa de calor, análise de cliques">
+          <h4 class="heading-4-n1">Mapa de cliques</h4>
+        </div>
+        <!-- image -->
+        <div class="heatmap-card--image-card">
+          <img class="image-heatmap" src="imgs\post-project\image-mockup-card-click-map.png" alt="mapa de calor, análise de cliques">
+        </div>
+        <div class="heatmap-card--btn">
+          <div class="analyzed-device">
+            <p class="label-n1">Mobile</p>
+            <p class="label-n1">Desktop</p>
+          </div>
+          <!-- btn -->
+          <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise">
+            <img src="icons\add_white.svg" alt="Ver mais"></button>
+          </a>
+        </div>
+      </div>
+      <!-- Card #2 -->
+      <div class="heatmap-card" id="heatmap-card--order-2">
+        <!-- header card -->
+        <div class="heatmap-card--header">
+          <img src="icons\move.svg" alt="mapa de calor, análise de movimento">
+          <h4 class="heading-4-n1">Movimento do mouse</h4>
+        </div>
+        <!-- image -->
+        <div class="heatmap-card--image-card">
+          <img class="image-heatmap" src="imgs\post-project\image-mockup-card-move-map.png" alt="mapa de calor, análise de movimento">
+        </div>
+        <div class="heatmap-card--btn">
+          <div class="analyzed-device">
+            <p class="label-n1"></p>
+            <p class="label-n1">Desktop</p>
+          </div>
+          <!-- btn -->
+          <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise">
+            <img src="icons\add_white.svg" alt="Ver mais"></button>
+          </a>
+        </div>
+      </div>
+      <!-- Card #3 -->
+      <div class="heatmap-card" id="heatmap-card--order-3">
+        <!-- header card -->
+        <div class="heatmap-card--header">
+          <img src="icons\scroll.svg" alt="mapa de calor, análise scroll na página">
+          <h4 class="heading-4-n1">Mapa de scroll</h4>
+        </div>
+        <!-- image -->
+        <div class="heatmap-card--image-card">
+          <img class="image-heatmap" src="imgs\post-project\image-mockup-card-scroll-map.png" alt="mapa de calor, análise scroll na página">
+        </div>
+        <div class="heatmap-card--btn">
+          <div class="analyzed-device">
+            <p class="label-n1">Mobile</p>
+            <p class="label-n1">Desktop</p>
+          </div>
+          <!-- btn -->
+          <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise">
+            <img src="icons\add_white.svg" alt="Ver mais"></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+<!-- Popup cliques -->
+  <div class="popup-heatmap" id="popup-heatmap-view-1">
+    <div class="popup-content">
+      <div class="page-project--description--hotjar-resume">
+        <div class="row-hotjar-analytics-header-data">
+          <div class="data-hotjar-analytics">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Dispositivos analisados, desktop"><span>Desktop</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-heatmap-view-1')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-hotjar-analytics">
+          <div class="col-page-project-analytics">
+            <div class="title">
+              <img src="icons\click.svg" alt="Heatmap de cliques na página">
+              <p class="heading-1-n1">Mapa de cliques ¹</p>
+            </div>
+            <p class="body-n1">Na versão desktop, a análise dos cliques destacou uma clara preferência pelo acesso às ofertas do folheto e às seções promocionais. Adicionalmente, foi notável a interação com as funcionalidades-chave e os banners da página inicial.<br><br>Já na versão mobile, observou-se um comportamento semelhante, com interações focadas no header e nas opções-chave de navegação. Além disso, houve uma forte interação com os banners da página inicial.</p>
+            <p class="label-n1">¹ Indica áreas onde os usuários mais clicam, revelando elementos de maior interesse.</p>
+          </div>
+          <div class="col-page-project-analytics-2">
+            <img id="home-apoio-ago23--click" src="imgs\post-project\image-home-apoio-ago23--analytics-click-mouse.png" alt="Heatmap de cliques na página">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Fim popup cliques -->
+<!-- Popup Movimento do mouse -->
+  <div class="popup-heatmap" id="popup-heatmap-view-2">
+    <div class="popup-content">
+      <div class="page-project--description--hotjar-resume">
+        <div class="row-hotjar-analytics-header-data">
+          <div class="data-hotjar-analytics">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Dispositivos analisados, desktop"><span>Desktop</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Dispositivos analisados, mobile"><span>Mobile</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-heatmap-view-2')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-hotjar-analytics">
+          <div class="col-page-project-analytics">
+            <div class="title">
+              <img src="icons\move.svg" alt="Heatmap movimento do mouse">
+              <p class="heading-1-n1">Movimento do mouse ¹</p>
+            </div>
+            <p class="body-n1">A análise do movimento do mouse revelou um padrão intenso de interação nas funcionalidades essenciais do header, sobretudo nos links de navegação.<br><br>Além disso, observou-se um comportamento exploratório notável nos banners da página inicial.</p>
+            <p class="label-n1">¹ Análise que registra áreas com movimentos frequentes do mouse, destacando atividades de navegação.</p>
+          </div>
+          <div class="col-page-project-analytics-2">
+            <img id="home-apoio-ago23--mouse-move" src="imgs\post-project\image-home-apoio-ago23--analytics-move-mouse.png" alt="Heatmap movimento do mouse">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Fim popup movimento do mouse -->
+<!-- Popup Movimento do mouse -->
+  <div class="popup-heatmap" id="popup-heatmap-view-3">
+    <div class="popup-content">
+      <div class="page-project--description--hotjar-resume">
+        <div class="row-hotjar-analytics-header-data">
+          <div class="data-hotjar-analytics">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Dispositivos analisados, desktop"><span>Desktop</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Dispositivos analisados, mobile"><span>Mobile</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-heatmap-view-3')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-hotjar-analytics">
+          <div class="col-page-project-analytics">
+            <div class="title">
+              <img src="icons\scroll.svg" alt="Heatmap scroll na página">
+              <p class="heading-1-n1">Mapa de scroll ¹</p>
+            </div>
+            <p class="body-n1">Houve uma queda bastante significativa na taxa de scroll a partir do banner na página inicial. Os usuários demonstram um interesse limitado, não encontrando estímulos que incentivem a exploração da página.<br><br>Na versão mobile, observa-se um padrão semelhante, com uma queda acentuada de interesse a partir do banner na página inicial.</p>
+            <p class="label-n1">¹ Rastreia a navegação vertical, mostrando até onde os usuários rolam na página. Identifica pontos de interesse ou desinteresse.</p>
+          </div>
+          <div class="col-page-project-analytics-2">
+            <img id="home-apoio-ago23--scroll" src="imgs\post-project\image-home-apoio-ago23--analytics-scroll.png" alt="Heatmap scroll na página">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Fim popup movimento do mouse -->
+<!-- Matriz CSD -->
+<div id="section--matriz-csd" class="page-project--matriz-csd">
+  <div class="page-project--description">
+    <h2 class="heading-1-n1">Pesquisa com usuários</h2>
+    <p class="body-n1">No decorrer do projeto, foi conduzida uma pesquisa on-line junto à base de clientes do site Apoio Entrega. O objetivo era <span>compreender a percepção dos usuários</span> em relação às promoções, ferramentas e áreas de interesse disponíveis em nossa plataforma.</p>
+    <p class="body-n1">Além disso, a pesquisa serviu como uma ferramenta para capturar insights sobre as funcionalidades e recursos que os usuários gostariam de ver implementados em nossa plataforma.</p>
+    <p class="body-n1">A etapa de construção da pesquisa foi dividida em três partes, detalhadas a seguir:</p>
+  </div>
+  <div class="slider-matriz-csd">
+    <!-- Card #1 Pesquisa -->
+    <div class="page-project--matriz-csd--card" id="matriz-card--order-1">
+      <!-- imagem card -->
+      <div class="image--matriz-csd--card">
+        <img src="imgs\post-project\matriz-csd_image-card-matriz.png" alt="Construção matriz CSD">
+      </div>
+      <div class="matriz-csd--card--description">
+          <!-- header card -->
+          <div class="header-card-matriz-csd">
+            <h6 class="heading-6-n1">Etapa 1</h6>
+            <h2 class="heading-2-n1">Matriz CSD</h2>
+          </div>
+          <!-- descrição card -->
+          <p class="body-n1">Utilizada para identificar os elementos-chave e organizar de forma sistemática o conhecimento existente, as áreas de incerteza e as questões a serem respondidas.</p>
+          <div class="btn-card-matriz-csd">
+            <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise"><img src="icons\add_white.svg" alt="Ver mais"></button></a>
+          </div>
+        </div>
+    </div>
+    <!-- Card #2 Pesquisa -->
+    <div class="page-project--matriz-csd--card" id="matriz-card--order-2">
+      <!-- imagem card -->
+      <div class="image--matriz-csd--card">
+        <img src="imgs\post-project\matriz-csd_image-card-pesquisa-hipotese.png" alt="Levantamento de hipóteses após construir a matriz CSD">
+      </div>
+      <div class="matriz-csd--card--description">
+          <!-- header card -->
+          <div class="header-card-matriz-csd">
+            <h6 class="heading-6-n1">Etapa 2</h6>
+            <h2 class="heading-2-n1">Hipóteses</h2>
+          </div>
+          <!-- descrição card -->
+          <p class="body-n1">Definição de hipóteses e formulação de suposições fundamentadas a partir dos dados extraídos na Matriz CSD. </p>
+          <div class="btn-card-matriz-csd">
+            <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise"><img src="icons\add_white.svg" alt="Ver mais"></button></a>
+          </div>
+        </div>
+    </div>
+    <!-- Card #3 Pesquisa -->
+    <div class="page-project--matriz-csd--card" id="matriz-card--order-3">
+      <!-- imagem card -->
+      <div class="image--matriz-csd--card">
+        <img src="imgs\post-project\matriz-csd_image-card-pesquisa.png" alt="Pesquisa com usuários">
+      </div>
+      <div class="matriz-csd--card--description">
+          <!-- header card -->
+          <div class="header-card-matriz-csd">
+            <h6 class="heading-6-n1">Etapa 3</h6>
+            <h2 class="heading-2-n1">Pesquisa</h2>
+          </div>
+          <!-- descrição card -->
+          <p class="body-n1">Construção do formulário, seleção e definição da base de respondentes, acompanhamento da aplicação da pesquisa e análise dos resultados.</p>
+          <div class="btn-card-matriz-csd">
+            <a href="#"><button class="btn-primary" alt="Mais detalhes sobre a análise"><img src="icons\add_white.svg" alt="Ver mais"></button></a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Popup Matriz CSD -->
+  <!-- Popup #1 -->
+  <div class="popup-matriz-csd" id="popup-matriz-view-1">
+    <div class="popup-content">
+      <div class="page-project--description--matriz-resume">
+        <div class="row-matriz-header-data">
+          <div class="data-matriz">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Etapa 1, Matriz CSD"><span>Etapa 1</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-matriz-view-1')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-matriz-description-column-top-to-bottom">
+          <div class="col-page-project-matriz">
+            <div class="title">
+              <img src="icons\matriz-csd.svg" alt="Matriz CSD">
+              <p class="heading-1-n1">Matriz CSD</p>
+            </div>
+            <p class="body-n1">Para compreender os hábitos e preferências do nosso público-alvo em relação às promoções do site, utilizamos a Matriz CSD para organizar as informações em três grupos. Ao listar e classificar as informações em cada uma dessas categorias, alcançamos uma visão clara do que é conhecido, o que é uma suposição e o que ainda precisa ser esclarecido.<br><br>Esta abordagem é crucial para tomadas de decisões e para orientar o desenvolvimento do projeto.</p>
+            <div class="matriz-csd-example">
+              <div class="col-matriz">
+                <div class="header">
+                  <p class="heading-5-n2">Certezas (C)</p>
+                  <p class="body-n1">Afirmações e comportamentos que já foram comprovados e aceitos como verdadeiros.</p>
+                </div>
+                <img src="imgs\post-project\post-it_certezas.png" alt="Matriz CSD, projeto Caique Badaró UX/UI Designer">
+              </div>
+              <div class="col-matriz">
+                <div class="header">
+                  <p class="heading-5-n2">Suposições (S)</p>
+                  <p class="body-n1">Hipóteses que ainda não foram confirmadas, mas são relevantes para o projeto.</p>
+                </div>
+                <img src="imgs\post-project\post-it_duvidas.png" alt="Matriz CSD, projeto Caique Badaró UX/UI Designer">
+              </div>
+              <div class="col-matriz">
+                <div class="header">
+                  <p class="heading-5-n2">Dúvidas (D)</p>
+                  <p class="body-n1">São listadas questões que requerem esclarecimento ou investigação adicional.</p>
+                </div>
+                <img src="imgs\post-project\post-it_suposicao.png" alt="Matriz CSD, projeto Caique Badaró UX/UI Designer">
+              </div>              
+            </div>
+            <div class="label-matriz"><p class="label-n1">Os post-its acima ilustram exemplos de afirmações levantadas durante a elaboração da Matriz CSD.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim popup #1 -->
+  <!-- Popup #2 -->
+  <div class="popup-matriz-csd" id="popup-matriz-view-2">
+    <div class="popup-content">
+      <div class="page-project--description--matriz-resume">
+        <div class="row-matriz-header-data">
+          <div class="data-matriz">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Etapa 2, Matriz CSD"><span>Etapa 2</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-matriz-view-2')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-matriz-description-column-left-to-right">
+          <div class="col-page-project-matriz">
+            <div class="title">
+              <img src="icons\hipotese.svg" alt="Hipóteses, Matriz CSD">
+              <p class="heading-1-n1">Hipóteses</p>
+            </div>
+            <p class="body-n1">A etapa de definição de hipóteses envolve a formulação de suposições fundamentadas a partir dos dados da Matriz CSD.<br><br>Essas hipóteses são proposições testáveis que ajudam a orientar o curso da pesquisa, fornecendo uma estrutura capaz de validar se uma suposição é verdadeira ou falsa.<br><br>Essa etapa é essencial para estabelecer direções claras para o trabalho que será realizado.</p>
+          </div>
+          <div class="col-page-project-matriz">
+            <img class="hipoteses-matriz-csd" src="imgs\post-project\image-hipoteses.svg" alt="Hipóteses matriz CSD, Caique Badaró UX/UI Designer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim popup #2 -->
+  <!-- Popup #3 -->
+  <div class="popup-matriz-csd" id="popup-matriz-view-3">
+    <div class="popup-content">
+      <div class="page-project--description--matriz-resume">
+        <div class="row-matriz-header-data">
+          <div class="data-matriz">
+            <button class="tag-info-adicional caption-n1"><img src="icons\calendar_today.svg" alt="Ícone"><span>2022</span></button>
+            <button class="tag-info-adicional caption-n1" alt="Etapa 3, Matriz CSD"><span>Etapa 3</span></button>
+          </div>
+          <div class="close-modal"><img onclick="closePopup('popup-matriz-view-3')" src="icons\close_white.svg" alt="Fechar pop-up"></div>
+        </div>
+        <div class="row-matriz-description-column-left-to-right">
+          <div class="col-page-project-matriz">
+            <div class="title">
+              <img src="icons\data-base.svg" alt="Pesquisa com usuários, Matriz CSD">
+              <p class="heading-1-n1">Pesquisa</p>
+            </div>
+            <p class="body-n1">O formulário da pesquisa foi desenvolvido para aplicação on-line, seguindo as melhores práticas para garantir rapidez, clareza e facilidade de compreensão.<br><br>O material foi projetado para validar as hipóteses levantadas, tanto positiva quanto negativamente.<br><br>Para a coleta de dados, uma base selecionada de clientes ativos foi contatada, e um acompanhamento próximo foi mantido ao longo do processo, permitindo ajustes caso fossem necessários.</p>
+          </div>
+          <div class="col-page-project-matriz">
+            <img class="pesquisa-matriz-csd" src="imgs\post-project\image-search.png" alt="Pesquisa com usuários matriz CSD, Caique Badaró UX/UI Designer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fim popup #3 -->
+  <!-- Fim Matriz CSD -->
+  <!-- Benchmarking steps -->
+  <div id="section--benchmarking" class="page-project--benchmarking">
+    <div class="page-project--description">
+      <h2 class="heading-1-n1">Benchmarking</h2>
+      <p class="body-n1">Foi conduzida uma análise para <span>comparar as práticas adotadas por concorrentes do setor</span>, proporcionando uma visão valiosa sobre o que está funcionando bem em outras organizações e como implementar na nossa plataforma. O benchmarking se mostra uma estratégia altamente eficaz para impulsionar o sucesso de um projeto.</p>
+      <p class="body-n1">A seguir, são exemplificados os passos realizados durante esse desenvolvimento.</p>
+    </div>
+    <!-- passos do benchmarking -->
+    <div class="steps-benchmarking">
+      <div class="col--bench-steps">
+        <!-- step #1 -->
+        <div class="step-bench">
+          <div class="order"><p class="body-n2">1</p></div>
+          <div class="icone-bench-step"><img src="icons\bench-search.svg" alt="Pesquisa de referências"></div>
+          <div class="paragraph"><p class="body-n2">Identificação dos concorrentes</p></div>
+        </div>
+        <!-- step #2 -->
+        <div class="step-bench">
+          <div class="order"><p class="body-n2">2</p></div>
+          <div class="icone-bench-step"><img src="icons\bench-analytics.svg" alt="Análise das páginas"></div>
+          <div class="paragraph"><p class="body-n2">Análise dos sites, desktop e mobile</p></div>
+        </div>
+      </div>
+      <div class="col--bench-steps">
+        <!-- step #3 -->
+        <div class="step-bench">
+          <div class="order"><p class="body-n2">3</p></div>
+          <div class="icone-bench-step"><img src="icons\mapping.svg" alt="Mapeamento de pontos fortes"></div>
+          <div class="paragraph"><p class="body-n2">Mapeamento de pontos fortes</p></div>
+        </div>
+        <!-- step #4 -->
+        <div class="step-bench">
+          <div class="order"><p class="body-n2">4</p></div>
+          <div class="icone-bench-step"><img src="icons\light.svg" alt="Referência criativa"></div>
+          <div class="paragraph"><p class="body-n2">Referência criativa projeto</p></div>
+        </div>
+      </div>    
+    </div>
+  </div>
+  <!-- Project Presentation -->
+  <div id="section--project-home-ap-ago22" class="page-project--presentation--home-ap">
+    <!-- Data projeto -->
+    <div class="row-project--presentation">
+      <div class="data-presentation">
+        <button class="tag-info-adicional caption-n1">
+          <img src="icons\calendar_today_white.svg" alt="Ícone"><span>Agosto de 2022</span>
+        </button>
+      </div>
+    </div>
+    <!-- Descrição projeto -->
+    <div class="row-project--presentation">
+      <div class="col-page-project-presentation">
+        <div class="title"><h2 class="heading-special-1">O projeto</h2></div>
+        <div class="description">
+          <p class="body-n1">O objetivo do projeto era aprimorar a percepção do site como uma <span>plataforma de preços competitivos e promoções impactantes</span>. Sendo assim, realizamos uma intervenção destacando as principais promoções disponíveis na primeira seção da página. Além disso, trabalhamos para proporcionar um maior destaque aos produtos com os preços atrativos.</p>
+          <p class="body-n1">Além disso, ampliamos a área de exposição dos produtos do folheto e sua visibilidade dentro da estrutura da página inicial do site.</p>
+          <p class="body-n1">A seguir é possível explorar o material desenvolvido para o projeto:</p>
+        </div>
+        <img id="mockup-projeto--home-ap-08-2023--desktop" src="imgs\post-project\image-mockup-desktop-project_caique-badaro-ux-ui.webp" alt="Página Home ApoioEntrega.com, projeto de Caique Badaró - UX/UI Designer">
+      </div>
+      <div class="col-page-project-presentation">
+        <div class="iframe-figma-mobile-home-ap-ago-22">
+            <iframe style="width: 100%; height: 100%;border: 1px solid var(--gray-n-5);border-radius: 8px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FI2t0FQsGPyeghD6UyJLJev%2FApoioEntrega.com---Home---Desktop-e-Mobile%3Ftype%3Ddesign%26node-id%3D2-26411%26t%3DxMBi36XorAVyyywz-1%26scaling%3Dmin-zoom%26page-id%3D2%253A3%26starting-point-node-id%3D2%253A29199%26hotspot-hints%3D0%26mode%3Ddesign" allowfullscreen></iframe>
+          </div>
+      </div>    
+    </div>
+    <div class="row-project--presentation btn-prototype-home-ap-ago22">
+      <a href="https://www.figma.com/proto/I2t0FQsGPyeghD6UyJLJev/ApoioEntrega.com---Home---Desktop-e-Mobile?embed_host=share&hotspot-hints=0&kind=proto&node-id=2-26411&page-id=2%3A3&scaling=min-zoom&starting-point-node-id=2%3A29199&t=HizmcUG1h4jIpfIe-1&type=design&mode=design"><!-- Link figma -->
+        <div class="btn-primary"><img src="icons\phone.svg" alt="Protótipo mobile projeto Home Apoio Entrega por Caique Badaró, UX e UI Designer">Protótipo Mobile</div>
+      </a>
+      <a href="https://www.figma.com/proto/I2t0FQsGPyeghD6UyJLJev/ApoioEntrega.com---Home---Desktop-e-Mobile?embed_host=share&hotspot-hints=0&kind=proto&node-id=2-29199&page-id=2%3A3&scaling=scale-down-width&starting-point-node-id=2%3A29199&t=UykoSUl5Ucauqpc7-1&type=design&mode=design"><!-- Link figma -->
+        <div class="btn-primary"><img src="icons\desktop.svg" alt="Protótipo mobile projeto Home Apoio Entrega por Caique Badaró, UX e UI Designer">Protótipo Desktop</div>
+      </a>
+    </div>
+    <div class="row-project--presentation">
+      <div class="col-page-project-presentation">
+        <div class="iframe-figma-desktop-home-ap-ago-22">
+          <iframe style="width: 100%; height: 100%;border: 1px solid var(--gray-n-5);border-radius: 8px;" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FI2t0FQsGPyeghD6UyJLJev%2FApoioEntrega.com---Home---Desktop-e-Mobile%3Ftype%3Ddesign%26node-id%3D2-29199%26t%3DjyiH9PpdPyAFNzqM-1%26scaling%3Dscale-down-width%26page-id%3D2%253A3%26starting-point-node-id%3D2%253A29199%26hotspot-hints%3D0%26mode%3Ddesign" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <img id="mockup-projeto--home-ap-08-2023--mobile-bg-complete" src="imgs\post-project\image-mockup-home-apoio_mobile.webp" alt="Página Home ApoioEntrega.com, projeto de Caique Badaró - UX/UI Designer">
+</div>
+    
+  <!-- Resultados do projeto -->
+  <div id="section--results-home-ap-ago22" class="page-project--presentation-results">
+    <div class="row-project--presentation">
+      <div class="data-presentation">
+        <button class="tag-info-adicional caption-n1">
+          <img src="icons\calendar_today.svg" alt="Ícone"><span>Outubro de 2022</span>
+        </button>
+      </div>
+    </div>
+    <div class="row-project--presentation">
+      <div class="col-page-project-presentation-results">
+        <div class="title"><h2 class="heading-special-1">Resultados</h2></div>
+        <div class="description">
+          <p class="body-n1">Após a implementação do projeto, houve o acompanhamento da repercussão das mudanças no site Apoio Entrega, principalmente quanto ao objetivo de <span>aprimorar a percepção do site como uma plataforma de preços competitivos e promoções impactantes.</span><br><br>Além disso, conseguimos mapear a influência do projeto na percepção de variedade de produtos em nossa página, conforme apresentado abaixo:</p>
+        </div>
+      </div>
+    </div>
+    <!-- Resultados do projeto -->
+    <div class="results-project-home-site">
+      <div class="results-data">
+        <!-- dados #1 -->
+        <div class="dados">
+          <img class="icon-card-dados" src="icons\money_white.svg" alt="Resultados do projeto, melhoria na percepção de preço.">
+          <p class="heading-special-data-0">+18%</p>
+          <p class="heading-5-n2">crescimento da satisfação dos clientes com o <span>preço</span> dos produtos</p>
+        </div>
+        <!--  dados #2 -->
+        <div class="dados">
+          <img class="icon-card-dados" src="icons\award_star_white.svg" alt="Resultados do projeto, melhoria na percepção de preço.">
+          <p class="heading-special-data-0">+14%</p>
+          <p class="heading-5-n2">crescimento da satisfação dos clientes com <span>ofertas e promoções</span></p>
+         </div>
+        <!-- dados #3 -->
+        <div class="dados">
+          <img class="icon-card-dados" src="icons\products_white.svg" alt="Resultados do projeto, melhoria na percepção de preço.">
+          <p class="heading-special-data-0">+9%</p>
+          <p class="heading-5-n2">crescimento na satisfação com a <span>variedade de produtos</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Resumo final resultados -->
+    <div class="results-data-resume">
+      <div class="dados-results">
+        <p class="heading-6-n2">Os <span>novos componentes</span> para destacar preços e promoções impactantes tornaram-se:</p>
+        <p class="heading-special-data-1">Top 3 mais clicados</p>
+        </div>
+    </div>    
+  </div>
+  <!-- Fim dos resultados do projeto -->
+  <!-- FAQ projeto -->
+  <div id="faq-project-home-ap22" class="page-project--faq">
+    <div class="faq-title"><h2 class="heading-2-n1">FAQ e informações complementares</h2></div>
+    <!-- Seletores de dúvidas frequentes -->
+    <div class="faq-options">
+      <!-- Dúvida #1 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Qual o principal objetivo do projeto?</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">Aprimorar a percepção do site como uma plataforma de preços competitivos e promoções impactantes.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #1 -->
+      <!-- Dúvida #2 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Quais foram os principais desafios identificados</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">Baixa visibilidade para as ofertas do site e falta de distinção clara entre produtos promocionados e ofertas padrão.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #2 -->
+      <!-- Dúvida #3 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Como a proposta de revisão abordou esses desafios?</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">Realizamos uma intervenção ao destacar as principais promoções na primeira seção da página, proporcionando maior visibilidade aos produtos com preços atrativos.<br><br>Nosso foco concentrou-se em ampliar a área de exposição dos produtos do folheto, aprimorando a visibilidade na página inicial. Essa abordagem foi cuidadosamente planejada para manter o projeto alinhado com a jornada típica do usuário, destacando promoções logo na chegada e ampliando a exposição de produtos relevantes.<br><br>Essas mudanças visavam não apenas aprimorar a experiência do usuário, mas também fortalecer a percepção do ApoioEntrega como uma plataforma com preços competitivos e promoções impactantes.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #3 -->
+      <!-- Dúvida #4 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Houve pesquisa de usuário envolvida no processo de revisão?</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">Sim, realizamos uma pesquisa em conjunto com a matriz CSD para validar as expectativas e hábitos dos usuários.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #4 -->
+      <!-- Dúvida #5 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Quais métricas foram usadas para avaliar os resultados da revisão?</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">Utilizaremos pesquisa de CSAT ao final das compras para avaliação qualitativa e mapas de calor para análise do impacto nas mudanças no comportamento dos usuários.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #5 -->
+      <!-- Dúvida #6 -->
+      <div class="faq-default">
+        <div class="faq-title-doubt">
+          <h4 class="heading-4-n2">Onde e como atua o Apoio Entrega?</h4>
+          <img class="close-faq-option" src="icons\expand-less.svg" alt="Fechar dúvida frequente selecionda">
+          <img class="open-faq-option" src="icons\expand-more.svg" alt="Visualizar dúvida frequente selecionda">
+        </div>
+        <div class="faq-paragraph-doubt">
+          <p class="body-n1">O Apoio Mineiro é uma rede de supermercados do Grupo Supernosso, posicionado por toda Belo Horizonte (MG) e Região Metropolitana.<br><br>Ele atua com vendas em loja física e plataformas digitais, oferecendo opções diversificadas para os seus clientes abastecerem seus lares e negócios.
+          </p>
+        </div>
+      </div>
+      <!-- Fim, dúvida #6 -->
+    </div>
+  </div>
+  <!-- Fim, FAQ projeto -->
+  <!-- Contato -->
+  <div id="secao--contato-home"></div>
+  <div class="contato--options">
+    <!-- Título seção -->
+    <div class="secao">
+      <h2 class="titulo-secao heading-2-n1">Contato</h2>
+    </div>
+    <div class="container--contato">
+      <div class="col-form-divisao">
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="https://www.linkedin.com/in/caique-badaro/" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\linkedin-2.svg" alt="LinkedIn">
+            <p class="body-n1 contato--type">LinkedIn</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Caique Badaró, UX/UI Designer, LinkedIn">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="https://api.whatsapp.com/send?phone=5531973004150" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\whatsapp.svg" alt="WhatsApp">
+            <p class="body-n1 contato--type">WhatsApp</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Ir para">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <a class="form--contato--btn-canais" href="mailto:caique.badaro@gmail.com" target="_new">
+          <div class="contato--col">
+            <img class="contato-options--icon" src="icons\mail.svg" alt="E-mail">
+            <p class="body-n1 contato--type">Email</p>
+            <img class="contato-options--arrow-right" src="icons\arrow-right.svg" alt="Ir para">
+          </div>
+        </a>
+        <!-- End Coluna -->
+        <!-- Coluna -->
+        <!-- <div class="contato--col--form">
+          <form class="form--contato" id="formHomePort">
+            <p class="body-n1 contato--type-form">Ou se preferir, deixe seu contato</p>
+            <p class="body-n1"><input class="input--contato" type="text" id="nameFormHome" placeholder="Qual o seu nome?"></p>
+            <p class="body-n1"><input class="input--contato" type="email" id="mailHomeForm" placeholder="Informe o seu e-mail" oninput="validarEmailNoInput()" onblur="validarEmailNoBlur()"></p>
+            <p class="alert" id="emailAlert"></p>
+            <button class="btn-primary btn-primary-disabled" id="btn-contato-form" onclick="enviarFormulario()" disabled>Enviar</button>
+            <p class="mensagem" id="mensagemFeedback"></p>
+          </form>
+        </div> -->
+        <!-- End Coluna -->
+      </div>
+      <div class="col-form-divisao">
+        <!-- Coluna -->
+        <div class="contato--col--image">
+          <lottie-player src="https://lottie.host/e9d4b4ff-a750-482f-81ab-52083f4eda68/PQShqsoDV4.json" background="transparent"  speed="0.7" loop autoplay></lottie-player>
+        </div>
+        <!-- End Coluna -->
+      </div>
+    </div>
+  </div>
+  <!-- End Contato -->
+
+
+
+<!-- Rodapé -->
+<footer>
+  <div class="footer--container">
+    <div class="footer--col footer-col--mod-1">
+      <a href="index.html"><img class="footer--logo" src="imgs\logo-horizontal_white.svg" alt="Caique Badaró, UX/UI Designer"></a>
+      <p class="body-n1">Apaixonado pelo universo do Design, principalmente pela criação de experiências envolventes e intuitivas, sou um profissional especializado em User Interface (UI), User Experience (UX) e UX Research. Minhas habilidades analíticas, aliadas à criatividade, me permitem conceber soluções inovadoras que não apenas atendem às necessidades dos usuários, mas também impulsionam resultados tangíveis.</p>
+    </div>
+    <div class="footer--container-links">
+      <div class="footer--col footer-col--mod-2">
+      <p class="caption-n1">Materiais</p>
+      <h6 class="heading-6-n2"><a id="btn-footer--projetos">Projetos</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--posts">Publicações</a></h6>
+    </div>
+    <div class="footer--col footer-col--mod-2">
+      <p class="caption-n1">Meu perfil</p>
+      <h6 class="heading-6-n2"><a id="btn-footer--curriculo">Currículo</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--academico">Acadêmico</a></h6>
+      <h6 class="heading-6-n2"><a id="btn-footer--contato">Contato</a></h6>
+    </div>
+    </div>
+    <div class="footer--col">
+      <button id="btn--footer-back-top" class="btn-primary btn--back-to-top"><img class="icon-btn-back-to-top" src="icons\arrow-up.svg"></button>
+    </div>
+  </div>
+  <div class="footer--col footer--icon-contato">
+    <a href="https://www.linkedin.com/in/caique-badaro/" target="_new"><img class="footer--contato-options-icon" src="icons\linkedin-2.svg" alt="LinkedIn"></a>
+    <a href="https://api.whatsapp.com/send?phone=5531973004150" target="_new"><img class="footer--contato-options-icon" src="icons\whatsapp.svg" alt="WhatsApp"></a>
+    <a href="mailto:caique.badaro@gmail.com" target="_new"><img class="footer--contato-options-icon" src="icons\mail.svg" alt="E-mail"></a>
+  </div>
+  <!-- Divisão footer -->
+  <div class="footer--linha-divisoria"></div>
+  <div class="footer--container">
+    <div class="footer--col direitos-reservados"><p class="caption-n1"><b>&copy; <span class="current-year"></span> - Caique Badaró.</b><br>Todos os direitos reservados.</p></div>
+  </div>
+</footer>
+<!-- End Rodapé -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- OwlCarousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/main.js"></script>
+<script src="js/main-info-details.js"></script>
+<!-- Scripts incluidos direto na página -->
+<!-- jQuery library -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".custom-carousel").owlCarousel({
+      autoWidth: true,
+      loop: true
+    });
+    $(".custom-carousel .item").click(function () {
+      $(this).toggleClass("active");
+    });
+  });
+</script>
+<!-- Ano vigente -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentYear = new Date().getFullYear();
+      const yearElements = document.querySelectorAll('.current-year');
+      
+      yearElements.forEach(function(element) {
+        element.textContent = currentYear;
+      });
+    });
+</script>
+
+</body>
+</html>
