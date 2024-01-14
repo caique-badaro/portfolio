@@ -1097,6 +1097,15 @@
     color: var(--gray-n-2)
     flex: 1 0 0;
   }
+  /* Contato dados */
+  .container--contato {
+    display: flex;
+    margin: 0px 18% 0px 18%;
+  }
+  .contato--options .titulo-secao {
+    padding: 80px 0 40px 0;
+    margin: 0 18%;
+  }
 }
 
 
@@ -2219,6 +2228,15 @@
   .faq-open .faq-paragraph-doubt p.body-n1 {
     color: var(--gray-n-2)
     flex: 1 0 0;
+  }
+  /* Contato dados */
+  .container--contato {
+    display: flex;
+    margin: 0px 8% 0px 8%;
+  }
+  .contato--options .titulo-secao {
+    padding: 40px 0 0 0;
+    margin: 0 8%;
   }
 }/* End breakpoint Tablet  */
 
@@ -3349,5 +3367,15 @@
   .faq-open .faq-paragraph-doubt p.body-n1 {
     color: var(--gray-n-2)
     flex: 1 0 0;
+  }
+  /* Contato dados */
+  .container--contato {
+    display: flex;
+    margin: 0px 8% 0px 8%;
+    flex-direction: column;
+  }
+  .contato--options .titulo-secao {
+    padding: 40px 0 0 0;
+    margin: 0 8%;
   }
 }/* End breakpoint Mobile */
