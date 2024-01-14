@@ -53,6 +53,9 @@ const sections = [
   // Bottom bar
   { buttonId: 'btn--botton-bar--post', sectionId: 'secao--publicacoes-home' },
   { buttonId: 'btn--botton-bar--projetos', sectionId: 'secao--projetos-home' },
+  { buttonId: 'btn--botton-bar--analitycs-project', sectionId:'section--hotjar-analytics'},
+  { buttonId: 'btn--botton-bar--results-project', sectionId:'section--results-home-ap-ago22'},
+  { buttonId: 'btn--bottom-bar--faq-projects', sectionId:'faq-project-home-ap22'},
   // NavBar
   { buttonId: 'btn--navbar--post', sectionId: 'secao--publicacoes-home' },
   { buttonId: 'btn--navbar--projetos', sectionId: 'secao--projetos-home' },
@@ -60,6 +63,9 @@ const sections = [
   { buttonId: 'btn--navbar--contato', sectionId: 'secao--contato-home' },
   { buttonId: 'btn--navbar--academico', sectionId: 'secao--academico-home' },
   { buttonId: 'btn--footer-back-top', sectionId: 'secao--super-banner-home' },
+  { buttonId: 'btn--navbar--analitycs-project', sectionId: 'section--hotjar-analytics' },
+  { buttonId: 'btn--navbar--results-project', sectionId: 'section--results-home-ap-ago22' },
+  { buttonId: 'btn--navbar--faq-projects', sectionId: 'faq-project-home-ap22' },
   // Popup
   { buttonId: 'btn-popup--curriculo', sectionId: 'secao--experiencias-home'},
   { buttonId: 'btn-popup--academico', sectionId: 'secao--academico-home'},
@@ -159,91 +165,91 @@ sections.forEach(item => {
 
 // Start - Script Formulário página Home
 
-  var url = 'https://script.google.com/macros/s/AKfycbxPi9hnp6P-cBKz86fJm6_KEutGXRvnGTDsBd9zVyk/exec';
+//   var url = 'https://script.google.com/macros/s/AKfycbxPi9hnp6P-cBKz86fJm6_KEutGXRvnGTDsBd9zVyk/exec';
 
 
-  function enviarFormulario() {
-    var emailInput = document.getElementById("mailHomeForm").value;
-    var emailAlert = document.getElementById("emailAlert");
-    var btnContato = document.getElementById("btn-contato-form");
-    var mensagemFeedback = document.getElementById("mensagemFeedback");
+//   function enviarFormulario() {
+//     var emailInput = document.getElementById("mailHomeForm").value;
+//     var emailAlert = document.getElementById("emailAlert");
+//     var btnContato = document.getElementById("btn-contato-form");
+//     var mensagemFeedback = document.getElementById("mensagemFeedback");
 
-    // Desabilitar o botão se o e-mail estiver vazio ou incorreto
-    if (emailInput === "" || !validarEmail(emailInput)) {
-      emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
-      mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
-      return;
-    }
+//     // Desabilitar o botão se o e-mail estiver vazio ou incorreto
+//     if (emailInput === "" || !validarEmail(emailInput)) {
+//       emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
+//       mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
+//       return;
+//     }
 
-    // Limpar o alerta e a mensagem de feedback se o e-mail estiver correto
-    emailAlert.innerText = "";
-    mensagemFeedback.innerText = "";
+//     // Limpar o alerta e a mensagem de feedback se o e-mail estiver correto
+//     emailAlert.innerText = "";
+//     mensagemFeedback.innerText = "";
 
-    // Alterar classe e desabilitar o botão
-    btnContato.classList.remove("btn-primary");
-    btnContato.classList.add("btn-primary-disabled");
-    btnContato.disabled = true;
+//     // Alterar classe e desabilitar o botão
+//     btnContato.classList.remove("btn-primary");
+//     btnContato.classList.add("btn-primary-disabled");
+//     btnContato.disabled = true;
 
-    // Enviar os dados para o script do Google Apps
-    google.script.run.withSuccessHandler(function(response) {
-      // Exibe a mensagem de feedback abaixo do botão em caso de sucesso
-      mensagemFeedback.innerText = response;
-      // Reativar o botão
-      btnContato.classList.remove("btn-primary-disabled");
-      btnContato.classList.add("btn-primary");
-      btnContato.disabled = false;
-    }).withFailureHandler(function(error) {
-      // Exibe a mensagem de feedback abaixo do botão em caso de falha
-      mensagemFeedback.innerText = error;
-      // Reativar o botão
-      btnContato.classList.remove("btn-primary-disabled");
-      btnContato.classList.add("btn-primary");
-      btnContato.disabled = false;
-    }).doPost({ mailHomeForm: emailInput });
-  }
+//     // Enviar os dados para o script do Google Apps
+//     google.script.run.withSuccessHandler(function(response) {
+//       // Exibe a mensagem de feedback abaixo do botão em caso de sucesso
+//       mensagemFeedback.innerText = response;
+//       // Reativar o botão
+//       btnContato.classList.remove("btn-primary-disabled");
+//       btnContato.classList.add("btn-primary");
+//       btnContato.disabled = false;
+//     }).withFailureHandler(function(error) {
+//       // Exibe a mensagem de feedback abaixo do botão em caso de falha
+//       mensagemFeedback.innerText = error;
+//       // Reativar o botão
+//       btnContato.classList.remove("btn-primary-disabled");
+//       btnContato.classList.add("btn-primary");
+//       btnContato.disabled = false;
+//     }).doPost({ mailHomeForm: emailInput });
+//   }
 
-  function validarEmail(email) {
-    // Adicione a mesma lógica de validação de e-mail usada no script do Google Apps
-    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
+//   function validarEmail(email) {
+//     // Adicione a mesma lógica de validação de e-mail usada no script do Google Apps
+//     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(email);
+//   }
 
-  function validarEmailNoInput() {
-  var emailInput = document.getElementById("mailHomeForm").value;
-  var emailAlert = document.getElementById("emailAlert");
-  var btnContato = document.getElementById("btn-contato-form");
-  var mensagemFeedback = document.getElementById("mensagemFeedback");
+//   function validarEmailNoInput() {
+//   var emailInput = document.getElementById("mailHomeForm").value;
+//   var emailAlert = document.getElementById("emailAlert");
+//   var btnContato = document.getElementById("btn-contato-form");
+//   var mensagemFeedback = document.getElementById("mensagemFeedback");
 
-  // Desabilitar o botão se o e-mail estiver vazio ou incorreto
-  if (emailInput === "" || !validarEmail(emailInput)) {
-    emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver incorreto ou vazio
-    btnContato.classList.remove("btn-primary");
-    btnContato.classList.add("btn-primary-disabled");
-    btnContato.disabled = true;
-    mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
-  } else {
-    emailAlert.innerText = "Tudo certo, e-mail válido";
-    btnContato.classList.remove("btn-primary-disabled");
-    btnContato.classList.add("btn-primary");
-    btnContato.disabled = false; // Reativar o botão se o e-mail estiver correto
-  }
-}
+//   // Desabilitar o botão se o e-mail estiver vazio ou incorreto
+//   if (emailInput === "" || !validarEmail(emailInput)) {
+//     emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver incorreto ou vazio
+//     btnContato.classList.remove("btn-primary");
+//     btnContato.classList.add("btn-primary-disabled");
+//     btnContato.disabled = true;
+//     mensagemFeedback.innerText = ""; // Limpar a mensagem de feedback
+//   } else {
+//     emailAlert.innerText = "Tudo certo, e-mail válido";
+//     btnContato.classList.remove("btn-primary-disabled");
+//     btnContato.classList.add("btn-primary");
+//     btnContato.disabled = false; // Reativar o botão se o e-mail estiver correto
+//   }
+// }
 
-  function validarEmailNoBlur() {
-    var emailInput = document.getElementById("mailHomeForm").value;
-    var emailAlert = document.getElementById("emailAlert");
+//   function validarEmailNoBlur() {
+//     var emailInput = document.getElementById("mailHomeForm").value;
+//     var emailAlert = document.getElementById("emailAlert");
 
-    // Exibir feedback de preenchimento correto ao sair do campo de e-mail
-    if (emailInput !== "") {
-      if (validarEmail(emailInput)) {
-        emailAlert.innerText = "Tudo certo, e-mail válido";
-      } else {
-        emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
-      }
-    } else {
-      emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver vazio
-    }
-  }
+//     // Exibir feedback de preenchimento correto ao sair do campo de e-mail
+//     if (emailInput !== "") {
+//       if (validarEmail(emailInput)) {
+//         emailAlert.innerText = "Tudo certo, e-mail válido";
+//       } else {
+//         emailAlert.innerText = "E-mail inválido, revise os dados e tente novamente";
+//       }
+//     } else {
+//       emailAlert.innerText = ""; // Limpar o alerta se o e-mail estiver vazio
+//     }
+//   }
 // Fim - Script Formulário página Home
 
       
