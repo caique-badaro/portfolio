@@ -220,7 +220,7 @@
   const btnLogo = document.getElementById("cb--menu-desktop--logo");
   if (btnLogo) {
     btnLogo.addEventListener("click", () => {
-      window.location.href = "index.html";
+      window.location.href = "https://www.caiquebadaro.com/";
     });
   }
   });
