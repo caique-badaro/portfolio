@@ -68,3 +68,41 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("Nenhum elemento .cb_carousel-card encontrado no DOM.");
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("carousel-style-guide--new-cap");
+    const scrollSpeed = 3; // Velocidade do scroll (ajuste conforme necessário)
+    let isVisible = false;
+    let intervalId;
+
+    function autoScroll() {
+        if (!isVisible) return; // Se não estiver visível, não executa
+
+        if (carousel.scrollWidth - carousel.clientWidth <= carousel.scrollLeft) {
+            carousel.scrollLeft = 0; // Reinicia o scroll ao atingir o fim
+        } else {
+            carousel.scrollLeft += scrollSpeed;
+        }
+    }
+
+    // Observer para detectar visibilidade do carrossel
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            isVisible = entry.isIntersecting;
+
+            if (isVisible) {
+                // Inicia o scroll quando o carrossel fica visível
+                if (!intervalId) {
+                    intervalId = setInterval(autoScroll, 30);
+                }
+            } else {
+                // Para o scroll quando o carrossel sai da tela
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        });
+    }, { threshold: 0.2 }); // Executa quando pelo menos 20% do carrossel estiver visível
+
+    observer.observe(carousel);
+});
